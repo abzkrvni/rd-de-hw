@@ -61,7 +61,7 @@ def fetch_sales() -> str:
             print(f"Error on page {page}: {e}")
             break
 
-    return "Sales data fetched and saved successfully", 200
+    return "Sales data fetched and saved successfully", 201
 
 if __name__ == '__main__':
     app.run(port=8081)
