@@ -40,7 +40,7 @@ class AvroConverterTestCase(unittest.TestCase):
             "stg_dir": self.stg_dir
         })
 
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 201)
         self.assertIn(b"Sales data converted to Avro format", response.data)
 
         avro_files = [f for f in os.listdir(self.stg_dir) if f.endswith(".avro")]

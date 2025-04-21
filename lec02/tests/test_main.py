@@ -33,7 +33,7 @@ class MainAppTestCase(unittest.TestCase):
             "date": "2022-08-09"
         })
 
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 201)
         self.assertIn(b"Sales data fetched and saved successfully", response.data)
 
         expected_file = os.path.join(self.test_dir, "sales_2022-08-09_1.json")

@@ -27,7 +27,7 @@ def run_job1():
             "raw_dir": RAW_DIR
         }
     )
-    assert resp.status_code == 200
+    assert resp.status_code == 201
     print(resp)
 
 
@@ -40,7 +40,7 @@ def run_job2():
             "stg_dir": STG_DIR
         }
     )
-    assert resp.status_code == 200
+    assert resp.status_code == 201
     print(resp)
 
 
