@@ -53,7 +53,7 @@ def convert_sales() -> str:
             avro_file = os.path.join(stg_dir, filename.replace('.json', '.avro'))
             convert_json_to_avro(json_file, avro_file)
 
-    return "Sales data converted to Avro format", 200
+    return "Sales data converted to Avro format", 201
 
 
 if __name__ == '__main__':
