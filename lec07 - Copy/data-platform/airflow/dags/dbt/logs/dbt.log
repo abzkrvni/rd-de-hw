@@ -1,0 +1,186 @@
+[0m10:27:01.743709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f83566e8880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8355803d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8355803dc0>]}
+[0m10:27:01.743701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb63739c8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb6364b8d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb6364b8df0>]}
+
+
+============================== 10:27:01.756578 | 550591e7-36de-4f58-84ad-bdb60c6f47d2 ==============================
+[0m10:27:01.756578 [info ] [MainThread]: Running with dbt=1.9.4
+
+
+============================== 10:27:01.756752 | b2a434ee-4e27-46e3-b2a5-f23ccde745f5 ==============================
+[0m10:27:01.756752 [info ] [MainThread]: Running with dbt=1.9.4
+[0m10:27:01.758860 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt deps --profiles-dir /opt/airflow/dags/dbt', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:27:01.759112 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt deps --profiles-dir /opt/airflow/dags/dbt', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m10:27:01.762234 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /opt/airflow/dags/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m10:27:01.762542 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /opt/airflow/dags/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m10:27:01.765797 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.1576516, "process_in_blocks": "52216", "process_kernel_time": 0.57377, "process_mem_max_rss": "89964", "process_out_blocks": "0", "process_user_time": 5.596779}
+[0m10:27:01.765819 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.1577545, "process_in_blocks": "50968", "process_kernel_time": 0.61231, "process_mem_max_rss": "89936", "process_out_blocks": "0", "process_user_time": 5.66136}
+[0m10:27:01.768245 [debug] [MainThread]: Command `dbt deps` failed at 10:27:01.768037 after 0.16 seconds
+[0m10:27:01.768267 [debug] [MainThread]: Command `dbt deps` failed at 10:27:01.768050 after 0.16 seconds
+[0m10:27:01.770341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f83566e8880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f83557d1e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f83557d1d90>]}
+[0m10:27:01.770341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb63739c8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb636487eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb636487dc0>]}
+[0m10:27:01.772539 [debug] [MainThread]: Flushing usage events
+[0m10:27:01.772459 [debug] [MainThread]: Flushing usage events
+[0m10:27:02.466234 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:27:02.466581 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:50:19.391032 [debug] [MainThread]: Got an exception trying to initialize tracking
+[0m10:50:19.391033 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 10:50:19.422116 | 32a1f6a2-06ef-4186-9179-8e90e4bb7938 ==============================
+[0m10:50:19.422116 [info ] [MainThread]: Running with dbt=1.9.4
+
+
+============================== 10:50:19.421984 | 5636963e-2142-45b2-9dfb-5cfdd9d26149 ==============================
+[0m10:50:19.421984 [info ] [MainThread]: Running with dbt=1.9.4
+[0m10:50:19.427115 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': '/opt/airflow/dags/dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt deps --profiles-dir /opt/airflow/dags/dbt', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m10:50:19.427280 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt deps --profiles-dir /opt/airflow/dags/dbt', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:50:19.432630 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /opt/airflow/dags/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m10:50:19.433509 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /opt/airflow/dags/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m10:50:19.440538 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.30308807, "process_in_blocks": "54040", "process_kernel_time": 0.635289, "process_mem_max_rss": "90072", "process_out_blocks": "0", "process_user_time": 5.211363}
+[0m10:50:19.440784 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.30310258, "process_in_blocks": "49328", "process_kernel_time": 0.703277, "process_mem_max_rss": "89944", "process_out_blocks": "0", "process_user_time": 5.063599}
+[0m10:50:19.444823 [debug] [MainThread]: Command `dbt deps` failed at 10:50:19.444273 after 0.31 seconds
+[0m10:50:19.445045 [debug] [MainThread]: Command `dbt deps` failed at 10:50:19.444429 after 0.31 seconds
+[0m10:50:19.447755 [debug] [MainThread]: Flushing usage events
+[0m10:50:19.448472 [debug] [MainThread]: Flushing usage events
+[0m12:50:07.577500 [debug] [MainThread]: Got an exception trying to initialize tracking
+[0m12:50:07.577160 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 12:50:07.593083 | 81d648eb-44bf-40f0-b8e5-c446fc8ed82d ==============================
+[0m12:50:07.593083 [info ] [MainThread]: Running with dbt=1.9.4
+
+
+============================== 12:50:07.593083 | 12bd08f3-9837-4819-a0ec-5e72fc1d0941 ==============================
+[0m12:50:07.593083 [info ] [MainThread]: Running with dbt=1.9.4
+[0m12:50:07.596658 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': '/opt/airflow/dags/dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt --profile homework run --project-dir=/opt/airflow/dags/dbt/homework --models iris_processed --vars {"is_test": false, "data_date": "2025-04-23"}', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:50:07.596699 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt --profile homework run --project-dir=/opt/airflow/dags/dbt/homework --models iris_processed --vars {"is_test": false, "data_date": "2025-04-22"}', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m12:50:07.600212 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /opt/airflow/dags/dbt/homework/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:50:07.600526 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /opt/airflow/dags/dbt/homework/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:50:07.604027 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.16907895, "process_in_blocks": "0", "process_kernel_time": 0.472349, "process_mem_max_rss": "90184", "process_out_blocks": "0", "process_user_time": 4.220993}
+[0m12:50:07.604041 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.16929488, "process_in_blocks": "0", "process_kernel_time": 0.531594, "process_mem_max_rss": "90284", "process_out_blocks": "0", "process_user_time": 4.182545}
+[0m12:50:07.606811 [debug] [MainThread]: Command `dbt run` failed at 12:50:07.606599 after 0.17 seconds
+[0m12:50:07.606771 [debug] [MainThread]: Command `dbt run` failed at 12:50:07.606556 after 0.17 seconds
+[0m12:50:07.608860 [debug] [MainThread]: Flushing usage events
+[0m12:50:07.608991 [debug] [MainThread]: Flushing usage events
+[0m12:55:13.409405 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 12:55:13.424865 | 169f5e97-81a5-4502-a742-8c86fa4f2849 ==============================
+[0m12:55:13.424865 [info ] [MainThread]: Running with dbt=1.9.4
+[0m12:55:13.427886 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt --profile homework run --project-dir=/opt/airflow/dags/dbt/homework --models iris_processed --vars {"is_test": false, "data_date": "2025-04-23"}', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m12:55:13.431178 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /opt/airflow/dags/dbt/homework/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:55:13.434807 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.15565906, "process_in_blocks": "0", "process_kernel_time": 0.140403, "process_mem_max_rss": "90380", "process_out_blocks": "0", "process_user_time": 3.249327}
+[0m12:55:13.437047 [debug] [MainThread]: Command `dbt run` failed at 12:55:13.436835 after 0.16 seconds
+[0m12:55:13.438697 [debug] [MainThread]: Flushing usage events
+[0m12:55:13.457963 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 12:55:13.474113 | 5ecd989a-c098-4b81-8ce9-b801827e220a ==============================
+[0m12:55:13.474113 [info ] [MainThread]: Running with dbt=1.9.4
+[0m12:55:13.477219 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt --profile homework run --project-dir=/opt/airflow/dags/dbt/homework --models iris_processed --vars {"is_test": false, "data_date": "2025-04-22"}', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m12:55:13.481086 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /opt/airflow/dags/dbt/homework/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:55:13.484563 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.18002401, "process_in_blocks": "0", "process_kernel_time": 0.199502, "process_mem_max_rss": "90268", "process_out_blocks": "0", "process_user_time": 3.261869}
+[0m12:55:13.487178 [debug] [MainThread]: Command `dbt run` failed at 12:55:13.486939 after 0.18 seconds
+[0m12:55:13.489155 [debug] [MainThread]: Flushing usage events
+[0m13:20:12.783328 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 13:20:12.805122 | ed080a3d-5b49-44f6-b093-a8da46294a61 ==============================
+[0m13:20:12.805122 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:20:12.808524 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt --profile homework run --project-dir=/opt/airflow/dags/dbt/homework --models iris_processed --vars {"is_test": false, "data_date": "2025-04-22"}', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:20:12.812176 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /opt/airflow/dags/dbt/homework/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:20:12.815988 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.18465045, "process_in_blocks": "0", "process_kernel_time": 0.160554, "process_mem_max_rss": "90492", "process_out_blocks": "0", "process_user_time": 3.622505}
+[0m13:20:12.820712 [debug] [MainThread]: Command `dbt run` failed at 13:20:12.820405 after 0.19 seconds
+[0m13:20:12.823130 [debug] [MainThread]: Flushing usage events
+[0m13:22:11.902921 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 13:22:11.918188 | 228efac0-956f-4d9f-ac41-9b814037e95a ==============================
+[0m13:22:11.918188 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:22:11.921447 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt --profile homework run --project-dir=/opt/airflow/dags/dbt/homework --models iris_processed --vars {"is_test": false, "data_date": "2025-04-22"}', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:22:11.925228 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /opt/airflow/dags/dbt/homework/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:22:11.928442 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.14993271, "process_in_blocks": "0", "process_kernel_time": 0.209465, "process_mem_max_rss": "90456", "process_out_blocks": "0", "process_user_time": 3.570885}
+[0m13:22:11.930856 [debug] [MainThread]: Command `dbt run` failed at 13:22:11.930637 after 0.15 seconds
+[0m13:22:11.932959 [debug] [MainThread]: Flushing usage events
+[0m13:50:46.194325 [debug] [MainThread]: Got an exception trying to initialize tracking
+[0m13:50:46.194328 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 13:50:46.211071 | 898fd7aa-e4c3-4a74-b8ae-33cc6249c0eb ==============================
+[0m13:50:46.211071 [info ] [MainThread]: Running with dbt=1.9.4
+
+
+============================== 13:50:46.211071 | 45c58bfc-a649-4445-9972-aec3a822f2f4 ==============================
+[0m13:50:46.211071 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:50:46.214819 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': '/opt/airflow/dags/dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt deps --profiles-dir /opt/airflow/dags/dbt', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:50:46.214843 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt deps --profiles-dir /opt/airflow/dags/dbt', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:50:46.218849 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /opt/airflow/dags/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:50:46.218910 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /opt/airflow/dags/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:50:46.225004 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.1488248, "process_in_blocks": "59912", "process_kernel_time": 0.403517, "process_mem_max_rss": "90308", "process_out_blocks": "0", "process_user_time": 4.569836}
+[0m13:50:46.225268 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.1490577, "process_in_blocks": "43768", "process_kernel_time": 0.523026, "process_mem_max_rss": "90092", "process_out_blocks": "0", "process_user_time": 4.549346}
+[0m13:50:46.227800 [debug] [MainThread]: Command `dbt deps` failed at 13:50:46.227570 after 0.15 seconds
+[0m13:50:46.227799 [debug] [MainThread]: Command `dbt deps` failed at 13:50:46.227564 after 0.15 seconds
+[0m13:50:46.229748 [debug] [MainThread]: Flushing usage events
+[0m13:50:46.229817 [debug] [MainThread]: Flushing usage events
+[0m14:02:28.666091 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 14:02:28.678629 | 6630dd84-d50a-458d-a8de-c22007508959 ==============================
+[0m14:02:28.678629 [info ] [MainThread]: Running with dbt=1.9.4
+[0m14:02:28.681695 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/opt/airflow/dags/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt --profile my_dbt_project run --project-dir=/opt/airflow/dags/dbt/my_dbt_project --models iris_processed --vars {"is_test": false, "data_date": "2025-04-22"}', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:02:28.685769 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /opt/airflow/dags/dbt/my_dbt_project/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m14:02:28.689213 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.12104842, "process_in_blocks": "0", "process_kernel_time": 0.110372, "process_mem_max_rss": "90136", "process_out_blocks": "0", "process_user_time": 2.869691}
+[0m14:02:28.691282 [debug] [MainThread]: Command `dbt run` failed at 14:02:28.691086 after 0.12 seconds
+[0m14:02:28.693275 [debug] [MainThread]: Flushing usage events

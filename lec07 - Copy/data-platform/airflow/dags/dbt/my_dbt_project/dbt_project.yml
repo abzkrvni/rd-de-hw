@@ -20,3 +20,17 @@ models:
   my_dbt_project:
     example:
       +materialized: table
+    staging:
+      +materialized: view
+    mart:
+      +materialized: table
+
+seeds:
+  my_dbt_project:
+    iris_dataset:
+      +column_types:
+        sepal_length: float
+        sepal_width: float
+        petal_length: float
+        petal_width: float
+        species: varchar
