@@ -26,7 +26,7 @@ def process_iris_data(**kwargs):
     
     # Query the processed Iris data from the dbt-transformed table
     query = """
-    SELECT * FROM homework.iris_processed
+    SELECT * FROM my_dbt_project.iris_processed
     """
     
     df = pd.read_sql(query, engine)

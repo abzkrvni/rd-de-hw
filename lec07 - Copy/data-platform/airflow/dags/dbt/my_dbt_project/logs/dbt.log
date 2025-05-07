@@ -1,0 +1,1677 @@
+[0m16:34:37.597299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab47b719a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab46c923d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab46c92370>]}
+
+
+============================== 16:34:37.623158 | 7af872e4-7913-4752-b914-7ecebdf30248 ==============================
+[0m16:34:37.623158 [info ] [MainThread]: Running with dbt=1.9.4
+[0m16:34:37.625701 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/opt/airflow/dags/dbt/my_dbt_project/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt --profile my_dbt_project run --project-dir=/opt/airflow/dags/dbt/my_dbt_project --models example --vars {"is_test": false, "data_date": "2025-05-05"}', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m16:34:38.159035 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7af872e4-7913-4752-b914-7ecebdf30248', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab46cda130>]}
+[0m16:34:38.284689 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7af872e4-7913-4752-b914-7ecebdf30248', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab46d354f0>]}
+[0m16:34:38.287386 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m16:34:38.548739 [debug] [MainThread]: checksum: f7bba7bfdae3420f3599c10312c6743ad7d97dfdd7cf25fae7a9276f18a22b47, vars: {'data_date': '2025-05-05', 'is_test': False}, profile: my_dbt_project, target: , version: 1.9.4
+[0m16:34:38.555686 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m16:34:38.557923 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7af872e4-7913-4752-b914-7ecebdf30248', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab453c08e0>]}
+[0m16:34:41.143049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7af872e4-7913-4752-b914-7ecebdf30248', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab4410b130>]}
+[0m16:34:41.316759 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m16:34:41.381951 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m16:34:41.437501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7af872e4-7913-4752-b914-7ecebdf30248', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab44131f40>]}
+[0m16:34:41.440196 [info ] [MainThread]: Found 1 model, 433 macros
+[0m16:34:41.442552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7af872e4-7913-4752-b914-7ecebdf30248', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab441317f0>]}
+[0m16:34:41.447794 [info ] [MainThread]: 
+[0m16:34:41.451034 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:34:41.453181 [info ] [MainThread]: 
+[0m16:34:41.455713 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:34:41.459234 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics'
+[0m16:34:41.569481 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m16:34:41.571753 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:34:41.573935 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:34:41.597681 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.024 seconds
+[0m16:34:41.603331 [debug] [ThreadPool]: On list_analytics: Close
+[0m16:34:41.608013 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now list_analytics_analytics)
+[0m16:34:41.627514 [debug] [ThreadPool]: Using postgres connection "list_analytics_analytics"
+[0m16:34:41.630108 [debug] [ThreadPool]: On list_analytics_analytics: BEGIN
+[0m16:34:41.632928 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:34:41.647158 [debug] [ThreadPool]: SQL status: BEGIN in 0.015 seconds
+[0m16:34:41.650169 [debug] [ThreadPool]: Using postgres connection "list_analytics_analytics"
+[0m16:34:41.652925 [debug] [ThreadPool]: On list_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_analytics_analytics"} */
+select
+      'analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m16:34:41.667559 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.012 seconds
+[0m16:34:41.671700 [debug] [ThreadPool]: On list_analytics_analytics: ROLLBACK
+[0m16:34:41.675498 [debug] [ThreadPool]: On list_analytics_analytics: Close
+[0m16:34:41.690821 [debug] [MainThread]: Using postgres connection "master"
+[0m16:34:41.693349 [debug] [MainThread]: On master: BEGIN
+[0m16:34:41.695478 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:34:41.712393 [debug] [MainThread]: SQL status: BEGIN in 0.017 seconds
+[0m16:34:41.714962 [debug] [MainThread]: Using postgres connection "master"
+[0m16:34:41.718494 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m16:34:41.734064 [debug] [MainThread]: SQL status: SELECT 0 in 0.013 seconds
+[0m16:34:41.738660 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7af872e4-7913-4752-b914-7ecebdf30248', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab273fb340>]}
+[0m16:34:41.741494 [debug] [MainThread]: On master: ROLLBACK
+[0m16:34:41.744132 [debug] [MainThread]: Using postgres connection "master"
+[0m16:34:41.746315 [debug] [MainThread]: On master: BEGIN
+[0m16:34:41.749546 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m16:34:41.753092 [debug] [MainThread]: On master: COMMIT
+[0m16:34:41.755623 [debug] [MainThread]: Using postgres connection "master"
+[0m16:34:41.758153 [debug] [MainThread]: On master: COMMIT
+[0m16:34:41.760640 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:34:41.762786 [debug] [MainThread]: On master: Close
+[0m16:34:41.775803 [debug] [Thread-1  ]: Began running node model.my_dbt_project.my_first_model
+[0m16:34:41.778762 [info ] [Thread-1  ]: 1 of 1 START sql table model analytics.my_first_model .......................... [RUN]
+[0m16:34:41.781541 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_analytics_analytics, now model.my_dbt_project.my_first_model)
+[0m16:34:41.784678 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.my_first_model
+[0m16:34:41.806354 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.my_first_model"
+[0m16:34:41.844412 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.my_first_model
+[0m16:34:41.957285 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.my_first_model"
+[0m16:34:41.993786 [debug] [Thread-1  ]: Using postgres connection "model.my_dbt_project.my_first_model"
+[0m16:34:41.996397 [debug] [Thread-1  ]: On model.my_dbt_project.my_first_model: BEGIN
+[0m16:34:41.998657 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m16:34:42.011725 [debug] [Thread-1  ]: SQL status: BEGIN in 0.013 seconds
+[0m16:34:42.014779 [debug] [Thread-1  ]: Using postgres connection "model.my_dbt_project.my_first_model"
+[0m16:34:42.018034 [debug] [Thread-1  ]: On model.my_dbt_project.my_first_model: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.my_first_model"} */
+
+  
+    
+
+  create  table "analytics"."analytics"."my_first_model__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT 
+  id,
+  name,
+  value,
+  created_at,
+  value * 2 as doubled_value
+FROM 
+  raw.example_data
+  );
+  
+[0m16:34:42.044412 [debug] [Thread-1  ]: SQL status: SELECT 6 in 0.023 seconds
+[0m16:34:42.095970 [debug] [Thread-1  ]: Using postgres connection "model.my_dbt_project.my_first_model"
+[0m16:34:42.100747 [debug] [Thread-1  ]: On model.my_dbt_project.my_first_model: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.my_first_model"} */
+alter table "analytics"."analytics"."my_first_model__dbt_tmp" rename to "my_first_model"
+[0m16:34:42.107747 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.002 seconds
+[0m16:34:42.172720 [debug] [Thread-1  ]: On model.my_dbt_project.my_first_model: COMMIT
+[0m16:34:42.176347 [debug] [Thread-1  ]: Using postgres connection "model.my_dbt_project.my_first_model"
+[0m16:34:42.179637 [debug] [Thread-1  ]: On model.my_dbt_project.my_first_model: COMMIT
+[0m16:34:42.187567 [debug] [Thread-1  ]: SQL status: COMMIT in 0.004 seconds
+[0m16:34:42.214333 [debug] [Thread-1  ]: Applying DROP to: "analytics"."analytics"."my_first_model__dbt_backup"
+[0m16:34:42.235484 [debug] [Thread-1  ]: Using postgres connection "model.my_dbt_project.my_first_model"
+[0m16:34:42.238862 [debug] [Thread-1  ]: On model.my_dbt_project.my_first_model: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.my_first_model"} */
+drop table if exists "analytics"."analytics"."my_first_model__dbt_backup" cascade
+[0m16:34:42.243044 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.001 seconds
+[0m16:34:42.255086 [debug] [Thread-1  ]: On model.my_dbt_project.my_first_model: Close
+[0m16:34:42.263688 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7af872e4-7913-4752-b914-7ecebdf30248', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab495791c0>]}
+[0m16:34:42.269408 [info ] [Thread-1  ]: 1 of 1 OK created sql table model analytics.my_first_model ..................... [[32mSELECT 6[0m in 0.48s]
+[0m16:34:42.273549 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.my_first_model
+[0m16:34:42.280483 [debug] [MainThread]: Using postgres connection "master"
+[0m16:34:42.283795 [debug] [MainThread]: On master: BEGIN
+[0m16:34:42.286787 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:34:42.308453 [debug] [MainThread]: SQL status: BEGIN in 0.021 seconds
+[0m16:34:42.313654 [debug] [MainThread]: On master: COMMIT
+[0m16:34:42.318720 [debug] [MainThread]: Using postgres connection "master"
+[0m16:34:42.322771 [debug] [MainThread]: On master: COMMIT
+[0m16:34:42.326217 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:34:42.330023 [debug] [MainThread]: On master: Close
+[0m16:34:42.335157 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:34:42.338620 [debug] [MainThread]: Connection 'model.my_dbt_project.my_first_model' was properly closed.
+[0m16:34:42.341589 [info ] [MainThread]: 
+[0m16:34:42.344371 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.89 seconds (0.89s).
+[0m16:34:42.348197 [debug] [MainThread]: Command end result
+[0m16:34:42.454109 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m16:34:42.462584 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m16:34:42.495060 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dags/dbt/my_dbt_project/target/run_results.json
+[0m16:34:42.497236 [info ] [MainThread]: 
+[0m16:34:42.502622 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:34:42.505847 [info ] [MainThread]: 
+[0m16:34:42.508335 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m16:34:42.513739 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.276699, "process_in_blocks": "6384", "process_kernel_time": 1.103344, "process_mem_max_rss": "114908", "process_out_blocks": "0", "process_user_time": 8.02432}
+[0m16:34:42.518913 [debug] [MainThread]: Command `dbt run` succeeded at 16:34:42.518588 after 5.28 seconds
+[0m16:34:42.521419 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab47b719a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab44131f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab46d354f0>]}
+[0m16:34:42.523849 [debug] [MainThread]: Flushing usage events
+[0m16:34:43.197596 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:34:52.982102 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a1c4ac9a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a1b5cd4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a1b5cd490>]}
+
+
+============================== 16:34:52.998136 | 8873618f-7d02-43f1-acc3-0358abad0b85 ==============================
+[0m16:34:52.998136 [info ] [MainThread]: Running with dbt=1.9.4
+[0m16:34:53.001408 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'version_check': 'True', 'fail_fast': 'True', 'log_path': '/opt/airflow/dags/dbt/my_dbt_project/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt --profile my_dbt_project test --project-dir=/opt/airflow/dags/dbt/my_dbt_project --vars {"is_test": false, "data_date": "2025-05-05"} --fail-fast', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m16:34:53.539326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8873618f-7d02-43f1-acc3-0358abad0b85', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a19d98340>]}
+[0m16:34:53.685824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8873618f-7d02-43f1-acc3-0358abad0b85', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a1b60ca60>]}
+[0m16:34:53.689014 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m16:34:53.931329 [debug] [MainThread]: checksum: f7bba7bfdae3420f3599c10312c6743ad7d97dfdd7cf25fae7a9276f18a22b47, vars: {'data_date': '2025-05-05', 'is_test': False}, profile: my_dbt_project, target: , version: 1.9.4
+[0m16:34:54.294425 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:34:54.297975 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:34:54.375660 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8873618f-7d02-43f1-acc3-0358abad0b85', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a19994130>]}
+[0m16:34:54.607253 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m16:34:54.633228 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m16:34:54.790691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8873618f-7d02-43f1-acc3-0358abad0b85', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a1988a160>]}
+[0m16:34:54.793177 [info ] [MainThread]: Found 1 model, 433 macros
+[0m16:34:54.795676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8873618f-7d02-43f1-acc3-0358abad0b85', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a198b45e0>]}
+[0m16:34:54.800334 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m16:34:54.806507 [debug] [MainThread]: Command end result
+[0m16:34:54.961184 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m16:34:54.982433 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m16:34:55.008917 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dags/dbt/my_dbt_project/target/run_results.json
+[0m16:34:55.014769 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 2.199675, "process_in_blocks": "360", "process_kernel_time": 0.461601, "process_mem_max_rss": "103540", "process_out_blocks": "0", "process_user_time": 5.268279}
+[0m16:34:55.019633 [debug] [MainThread]: Command `dbt test` succeeded at 16:34:55.019120 after 2.20 seconds
+[0m16:34:55.023436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a1c4ac9a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a1b60ca60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a1988a940>]}
+[0m16:34:55.027292 [debug] [MainThread]: Flushing usage events
+[0m16:34:55.601326 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:27:54.028430 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 13:27:54.044278 | 95c04da2-36cd-4664-8ec8-363c65a64ae9 ==============================
+[0m13:27:54.044278 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:27:54.047167 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/opt/airflow/dags/dbt/my_dbt_project/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt --profile my_dbt_project run --project-dir=/opt/airflow/dags/dbt/my_dbt_project --models example --vars {"is_test": false, "data_date": "2025-05-05"}', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:27:54.915163 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m13:27:55.176280 [debug] [MainThread]: checksum: f7bba7bfdae3420f3599c10312c6743ad7d97dfdd7cf25fae7a9276f18a22b47, vars: {'data_date': '2025-05-05', 'is_test': False}, profile: my_dbt_project, target: , version: 1.9.4
+[0m13:27:55.555032 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:27:55.556975 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:27:55.821467 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m13:27:55.854215 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m13:27:55.909121 [info ] [MainThread]: Found 1 model, 433 macros
+[0m13:27:55.971471 [info ] [MainThread]: 
+[0m13:27:55.974120 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:27:55.975976 [info ] [MainThread]: 
+[0m13:27:55.977988 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:27:55.980696 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics'
+[0m13:27:56.093238 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m13:27:56.095407 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:27:56.097362 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:27:56.150912 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.053 seconds
+[0m13:27:56.155474 [debug] [ThreadPool]: On list_analytics: Close
+[0m13:27:56.159061 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now list_analytics_analytics)
+[0m13:27:56.178908 [debug] [ThreadPool]: Using postgres connection "list_analytics_analytics"
+[0m13:27:56.181557 [debug] [ThreadPool]: On list_analytics_analytics: BEGIN
+[0m13:27:56.183604 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:27:56.198446 [debug] [ThreadPool]: SQL status: BEGIN in 0.015 seconds
+[0m13:27:56.200800 [debug] [ThreadPool]: Using postgres connection "list_analytics_analytics"
+[0m13:27:56.203380 [debug] [ThreadPool]: On list_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_analytics_analytics"} */
+select
+      'analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m13:27:56.226516 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.021 seconds
+[0m13:27:56.230239 [debug] [ThreadPool]: On list_analytics_analytics: ROLLBACK
+[0m13:27:56.232411 [debug] [ThreadPool]: On list_analytics_analytics: Close
+[0m13:27:56.250321 [debug] [MainThread]: Using postgres connection "master"
+[0m13:27:56.253283 [debug] [MainThread]: On master: BEGIN
+[0m13:27:56.256844 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:27:56.270925 [debug] [MainThread]: SQL status: BEGIN in 0.014 seconds
+[0m13:27:56.273233 [debug] [MainThread]: Using postgres connection "master"
+[0m13:27:56.275623 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m13:27:56.288879 [debug] [MainThread]: SQL status: SELECT 0 in 0.010 seconds
+[0m13:27:56.292660 [debug] [MainThread]: On master: ROLLBACK
+[0m13:27:56.295342 [debug] [MainThread]: Using postgres connection "master"
+[0m13:27:56.297827 [debug] [MainThread]: On master: BEGIN
+[0m13:27:56.300721 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m13:27:56.304142 [debug] [MainThread]: On master: COMMIT
+[0m13:27:56.306599 [debug] [MainThread]: Using postgres connection "master"
+[0m13:27:56.308791 [debug] [MainThread]: On master: COMMIT
+[0m13:27:56.311762 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:27:56.313993 [debug] [MainThread]: On master: Close
+[0m13:27:56.327451 [debug] [Thread-1  ]: Began running node model.my_dbt_project.my_first_model
+[0m13:27:56.330232 [info ] [Thread-1  ]: 1 of 1 START sql table model analytics.my_first_model .......................... [RUN]
+[0m13:27:56.332603 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_analytics_analytics, now model.my_dbt_project.my_first_model)
+[0m13:27:56.335180 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.my_first_model
+[0m13:27:56.366079 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.my_first_model"
+[0m13:27:56.394817 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.my_first_model
+[0m13:27:56.577956 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.my_first_model"
+[0m13:27:56.592495 [debug] [Thread-1  ]: Using postgres connection "model.my_dbt_project.my_first_model"
+[0m13:27:56.594356 [debug] [Thread-1  ]: On model.my_dbt_project.my_first_model: BEGIN
+[0m13:27:56.596129 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m13:27:56.610984 [debug] [Thread-1  ]: SQL status: BEGIN in 0.015 seconds
+[0m13:27:56.613855 [debug] [Thread-1  ]: Using postgres connection "model.my_dbt_project.my_first_model"
+[0m13:27:56.616942 [debug] [Thread-1  ]: On model.my_dbt_project.my_first_model: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.my_first_model"} */
+
+  
+    
+
+  create  table "analytics"."analytics"."my_first_model__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT 
+  id,
+  name,
+  value,
+  created_at,
+  value * 2 as doubled_value
+FROM 
+  raw.example_data
+  );
+  
+[0m13:27:56.671426 [debug] [Thread-1  ]: SQL status: SELECT 6 in 0.050 seconds
+[0m13:27:56.706611 [debug] [Thread-1  ]: Using postgres connection "model.my_dbt_project.my_first_model"
+[0m13:27:56.709119 [debug] [Thread-1  ]: On model.my_dbt_project.my_first_model: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.my_first_model"} */
+alter table "analytics"."analytics"."my_first_model" rename to "my_first_model__dbt_backup"
+[0m13:27:56.712764 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.002 seconds
+[0m13:27:56.725525 [debug] [Thread-1  ]: Using postgres connection "model.my_dbt_project.my_first_model"
+[0m13:27:56.728001 [debug] [Thread-1  ]: On model.my_dbt_project.my_first_model: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.my_first_model"} */
+alter table "analytics"."analytics"."my_first_model__dbt_tmp" rename to "my_first_model"
+[0m13:27:56.731164 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:27:56.788132 [debug] [Thread-1  ]: On model.my_dbt_project.my_first_model: COMMIT
+[0m13:27:56.791016 [debug] [Thread-1  ]: Using postgres connection "model.my_dbt_project.my_first_model"
+[0m13:27:56.793657 [debug] [Thread-1  ]: On model.my_dbt_project.my_first_model: COMMIT
+[0m13:27:56.799869 [debug] [Thread-1  ]: SQL status: COMMIT in 0.004 seconds
+[0m13:27:56.828822 [debug] [Thread-1  ]: Applying DROP to: "analytics"."analytics"."my_first_model__dbt_backup"
+[0m13:27:56.848757 [debug] [Thread-1  ]: Using postgres connection "model.my_dbt_project.my_first_model"
+[0m13:27:56.851941 [debug] [Thread-1  ]: On model.my_dbt_project.my_first_model: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.my_first_model"} */
+drop table if exists "analytics"."analytics"."my_first_model__dbt_backup" cascade
+[0m13:27:56.964936 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.110 seconds
+[0m13:27:56.974296 [debug] [Thread-1  ]: On model.my_dbt_project.my_first_model: Close
+[0m13:27:56.982424 [info ] [Thread-1  ]: 1 of 1 OK created sql table model analytics.my_first_model ..................... [[32mSELECT 6[0m in 0.64s]
+[0m13:27:56.985910 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.my_first_model
+[0m13:27:56.990623 [debug] [MainThread]: Using postgres connection "master"
+[0m13:27:56.992434 [debug] [MainThread]: On master: BEGIN
+[0m13:27:56.994420 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:27:57.009603 [debug] [MainThread]: SQL status: BEGIN in 0.015 seconds
+[0m13:27:57.012380 [debug] [MainThread]: On master: COMMIT
+[0m13:27:57.014734 [debug] [MainThread]: Using postgres connection "master"
+[0m13:27:57.017271 [debug] [MainThread]: On master: COMMIT
+[0m13:27:57.020085 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:27:57.022099 [debug] [MainThread]: On master: Close
+[0m13:27:57.024630 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:27:57.027261 [debug] [MainThread]: Connection 'model.my_dbt_project.my_first_model' was properly closed.
+[0m13:27:57.029173 [info ] [MainThread]: 
+[0m13:27:57.031048 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 1.05 seconds (1.05s).
+[0m13:27:57.033974 [debug] [MainThread]: Command end result
+[0m13:27:57.111685 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m13:27:57.119666 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m13:27:57.140518 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dags/dbt/my_dbt_project/target/run_results.json
+[0m13:27:57.142359 [info ] [MainThread]: 
+[0m13:27:57.144474 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:27:57.146291 [info ] [MainThread]: 
+[0m13:27:57.148172 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m13:27:57.150928 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.2638214, "process_in_blocks": "5072", "process_kernel_time": 0.513537, "process_mem_max_rss": "112688", "process_out_blocks": "0", "process_user_time": 5.518012}
+[0m13:27:57.153841 [debug] [MainThread]: Command `dbt run` succeeded at 13:27:57.153549 after 3.27 seconds
+[0m13:27:57.155900 [debug] [MainThread]: Flushing usage events
+[0m13:28:03.018945 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 13:28:03.033682 | 861d1e4c-b204-4149-93c4-34653499f49f ==============================
+[0m13:28:03.033682 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:28:03.036616 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'version_check': 'True', 'fail_fast': 'True', 'log_path': '/opt/airflow/dags/dbt/my_dbt_project/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt --profile my_dbt_project test --project-dir=/opt/airflow/dags/dbt/my_dbt_project --vars {"is_test": false, "data_date": "2025-05-05"} --fail-fast', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:28:03.564045 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m13:28:03.773710 [debug] [MainThread]: checksum: f7bba7bfdae3420f3599c10312c6743ad7d97dfdd7cf25fae7a9276f18a22b47, vars: {'data_date': '2025-05-05', 'is_test': False}, profile: my_dbt_project, target: , version: 1.9.4
+[0m13:28:04.100084 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:28:04.102062 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:28:04.364903 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m13:28:04.385372 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m13:28:04.491932 [info ] [MainThread]: Found 1 model, 433 macros
+[0m13:28:04.495394 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m13:28:04.499940 [debug] [MainThread]: Command end result
+[0m13:28:04.581522 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m13:28:04.590808 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m13:28:04.604464 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dags/dbt/my_dbt_project/target/run_results.json
+[0m13:28:04.606941 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.7246907, "process_in_blocks": "592", "process_kernel_time": 0.269044, "process_mem_max_rss": "103560", "process_out_blocks": "0", "process_user_time": 4.673404}
+[0m13:28:04.609375 [debug] [MainThread]: Command `dbt test` succeeded at 13:28:04.609024 after 1.73 seconds
+[0m13:28:04.611545 [debug] [MainThread]: Flushing usage events
+[0m13:29:18.525161 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 13:29:18.539971 | f060cb21-c4db-4086-b770-5ac746f4c98c ==============================
+[0m13:29:18.539971 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:29:18.543100 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/opt/airflow/dags/dbt/my_dbt_project/logs', 'profiles_dir': '/opt/airflow/dags/dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt --profile my_dbt_project run --project-dir=/opt/airflow/dags/dbt/my_dbt_project --models iris_processed --vars {"is_test": false, "data_date": "2025-04-22"}', 'send_anonymous_usage_stats': 'True'}
+[0m13:29:19.164347 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m13:29:19.413094 [debug] [MainThread]: checksum: a4a9aead84b43dddec45e3453377ef7f8d5e89716f37693f60423ed41c2ad7cb, vars: {'data_date': '2025-04-22', 'is_test': False}, profile: my_dbt_project, target: , version: 1.9.4
+[0m13:29:19.674101 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m13:29:19.676326 [debug] [MainThread]: previous checksum: a4a9aead84b43dddec45e3453377ef7f8d5e89716f37693f60423ed41c2ad7cb, current checksum: f7bba7bfdae3420f3599c10312c6743ad7d97dfdd7cf25fae7a9276f18a22b47
+[0m13:29:22.808622 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m13:29:22.826526 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m13:29:22.859498 [info ] [MainThread]: Found 1 model, 433 macros
+[0m13:29:22.861596 [warn ] [MainThread]: The selection criterion 'iris_processed' does not match any enabled nodes
+[0m13:29:22.864016 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m13:29:22.865910 [debug] [MainThread]: Command end result
+[0m13:29:22.947640 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m13:29:22.958403 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m13:29:22.970837 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dags/dbt/my_dbt_project/target/run_results.json
+[0m13:29:22.973983 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.610808, "process_in_blocks": "416", "process_kernel_time": 0.36121, "process_mem_max_rss": "106800", "process_out_blocks": "0", "process_user_time": 7.705817}
+[0m13:29:22.976150 [debug] [MainThread]: Command `dbt run` succeeded at 13:29:22.975937 after 4.61 seconds
+[0m13:29:22.977802 [debug] [MainThread]: Flushing usage events
+[0m13:39:57.482524 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 13:39:57.496701 | 9af1fe80-6f12-46cb-94ba-2ed1273ac2dc ==============================
+[0m13:39:57.496701 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:39:57.499737 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/opt/airflow/dags/dbt/my_dbt_project/logs', 'version_check': 'True', 'profiles_dir': '/opt/airflow/dags/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt --profile my_dbt_project run --project-dir=/opt/airflow/dags/dbt/my_dbt_project --models iris_processed --vars {"is_test": false, "data_date": "2025-04-22"}', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:39:58.073188 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m13:39:58.352673 [debug] [MainThread]: checksum: a4a9aead84b43dddec45e3453377ef7f8d5e89716f37693f60423ed41c2ad7cb, vars: {'data_date': '2025-04-22', 'is_test': False}, profile: my_dbt_project, target: , version: 1.9.4
+[0m13:39:58.688314 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:39:58.690147 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:39:58.941195 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m13:39:58.961023 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m13:39:58.994980 [info ] [MainThread]: Found 1 model, 433 macros
+[0m13:39:59.051341 [warn ] [MainThread]: The selection criterion 'iris_processed' does not match any enabled nodes
+[0m13:39:59.054103 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m13:39:59.058758 [debug] [MainThread]: Command end result
+[0m13:39:59.139683 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m13:39:59.151071 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m13:39:59.166186 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dags/dbt/my_dbt_project/target/run_results.json
+[0m13:39:59.169112 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.8170305, "process_in_blocks": "0", "process_kernel_time": 0.148786, "process_mem_max_rss": "102580", "process_out_blocks": "0", "process_user_time": 5.247211}
+[0m13:39:59.171418 [debug] [MainThread]: Command `dbt run` succeeded at 13:39:59.171218 after 1.82 seconds
+[0m13:39:59.173395 [debug] [MainThread]: Flushing usage events
+[0m13:52:36.698964 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 13:52:36.710645 | 1490bc5e-bf7f-4ea0-b69f-14e1c48b0b2a ==============================
+[0m13:52:36.710645 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:52:36.713335 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/opt/airflow/dags/dbt/my_dbt_project/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt --profile my_dbt_project run --project-dir=/opt/airflow/dags/dbt/my_dbt_project --models iris_processed --vars {"is_test": false, "data_date": "2025-04-22"}', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:52:37.262042 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m13:52:37.441380 [debug] [MainThread]: checksum: a4a9aead84b43dddec45e3453377ef7f8d5e89716f37693f60423ed41c2ad7cb, vars: {'data_date': '2025-04-22', 'is_test': False}, profile: my_dbt_project, target: , version: 1.9.4
+[0m13:52:37.718726 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:52:37.720424 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:52:37.919217 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m13:52:37.936448 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m13:52:37.974709 [info ] [MainThread]: Found 1 model, 433 macros
+[0m13:52:38.026521 [warn ] [MainThread]: The selection criterion 'iris_processed' does not match any enabled nodes
+[0m13:52:38.029197 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m13:52:38.033795 [debug] [MainThread]: Command end result
+[0m13:52:38.104671 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m13:52:38.115525 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m13:52:38.127298 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dags/dbt/my_dbt_project/target/run_results.json
+[0m13:52:38.129585 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.552241, "process_in_blocks": "3760", "process_kernel_time": 0.227024, "process_mem_max_rss": "102768", "process_out_blocks": "0", "process_user_time": 3.819927}
+[0m13:52:38.131399 [debug] [MainThread]: Command `dbt run` succeeded at 13:52:38.131221 after 1.55 seconds
+[0m13:52:38.133067 [debug] [MainThread]: Flushing usage events
+[0m14:00:17.908455 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 14:00:17.920871 | 8e486fd8-5dd5-45f0-9abe-8a30e0f00dad ==============================
+[0m14:00:17.920871 [info ] [MainThread]: Running with dbt=1.9.4
+[0m14:00:17.923654 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/dags/dbt/my_dbt_project/logs', 'profiles_dir': '/opt/airflow/dags/dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt --profile my_dbt_project run --project-dir=/opt/airflow/dags/dbt/my_dbt_project --models iris_processed --vars {"is_test": false, "data_date": "2025-04-22"}', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:00:18.343014 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:00:18.512868 [debug] [MainThread]: checksum: a4a9aead84b43dddec45e3453377ef7f8d5e89716f37693f60423ed41c2ad7cb, vars: {'data_date': '2025-04-22', 'is_test': False}, profile: my_dbt_project, target: , version: 1.9.4
+[0m14:00:18.746177 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:00:18.748138 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:00:18.943099 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m14:00:18.959903 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m14:00:18.990299 [info ] [MainThread]: Found 1 model, 433 macros
+[0m14:00:19.045260 [warn ] [MainThread]: The selection criterion 'iris_processed' does not match any enabled nodes
+[0m14:00:19.049021 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m14:00:19.053215 [debug] [MainThread]: Command end result
+[0m14:00:19.125702 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m14:00:19.137538 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m14:00:19.149831 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dags/dbt/my_dbt_project/target/run_results.json
+[0m14:00:19.152085 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.3701365, "process_in_blocks": "0", "process_kernel_time": 0.229833, "process_mem_max_rss": "102708", "process_out_blocks": "0", "process_user_time": 3.767263}
+[0m14:00:19.153877 [debug] [MainThread]: Command `dbt run` succeeded at 14:00:19.153722 after 1.37 seconds
+[0m14:00:19.155427 [debug] [MainThread]: Flushing usage events
+[0m14:07:33.352856 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 14:07:33.364541 | 14b372b8-638f-4d2b-aa36-e959c58b2f80 ==============================
+[0m14:07:33.364541 [info ] [MainThread]: Running with dbt=1.9.4
+[0m14:07:33.367102 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/opt/airflow/dags/dbt/my_dbt_project/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt --profile my_dbt_project run --project-dir=/opt/airflow/dags/dbt/my_dbt_project --models iris_processed --vars {"is_test": false, "data_date": "2025-04-22"}', 'send_anonymous_usage_stats': 'True'}
+[0m14:07:33.819455 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:07:34.012148 [debug] [MainThread]: checksum: a4a9aead84b43dddec45e3453377ef7f8d5e89716f37693f60423ed41c2ad7cb, vars: {'data_date': '2025-04-22', 'is_test': False}, profile: my_dbt_project, target: , version: 1.9.4
+[0m14:07:34.284332 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m14:07:34.286262 [debug] [MainThread]: Partial parsing: added file: my_dbt_project://models/mart/iris_processed.sql
+[0m14:07:34.287985 [debug] [MainThread]: Partial parsing: added file: my_dbt_project://models/staging/stg_iris.sql
+[0m14:07:34.809036 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.my_dbt_project.stg_iris' (models/staging/stg_iris.sql) depends on a source named 'analytics.iris_dataset' which was not found
+[0m14:07:34.811720 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.5795794, "process_in_blocks": "416", "process_kernel_time": 0.260305, "process_mem_max_rss": "103092", "process_out_blocks": "0", "process_user_time": 3.934614}
+[0m14:07:34.813644 [debug] [MainThread]: Command `dbt run` failed at 14:07:34.813503 after 1.58 seconds
+[0m14:07:34.815353 [debug] [MainThread]: Flushing usage events
+[0m14:10:18.030363 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 14:10:18.043646 | 7d64eaca-7901-4132-b62e-fa1f705849e6 ==============================
+[0m14:10:18.043646 [info ] [MainThread]: Running with dbt=1.9.4
+[0m14:10:18.046617 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/dags/dbt/my_dbt_project/logs', 'profiles_dir': '/opt/airflow/dags/dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt --profile my_dbt_project run --project-dir=/opt/airflow/dags/dbt/my_dbt_project --models iris_processed --vars {"is_test": false, "data_date": "2025-04-22"}', 'send_anonymous_usage_stats': 'True'}
+[0m14:10:18.487423 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:10:18.665806 [debug] [MainThread]: checksum: a4a9aead84b43dddec45e3453377ef7f8d5e89716f37693f60423ed41c2ad7cb, vars: {'data_date': '2025-04-22', 'is_test': False}, profile: my_dbt_project, target: , version: 1.9.4
+[0m14:10:18.819017 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m14:10:20.679619 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.my_dbt_project.stg_iris' (models/staging/stg_iris.sql) depends on a source named 'analytics.iris_dataset' which was not found
+[0m14:10:20.681886 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.7661653, "process_in_blocks": "0", "process_kernel_time": 0.200887, "process_mem_max_rss": "103784", "process_out_blocks": "0", "process_user_time": 5.243158}
+[0m14:10:20.683730 [debug] [MainThread]: Command `dbt run` failed at 14:10:20.683587 after 2.77 seconds
+[0m14:10:20.685214 [debug] [MainThread]: Flushing usage events
+[0m14:14:51.736589 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 14:14:51.749384 | 1d4ea304-94b7-417d-b6db-1e7d0b3ab019 ==============================
+[0m14:14:51.749384 [info ] [MainThread]: Running with dbt=1.9.4
+[0m14:14:51.752064 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/opt/airflow/dags/dbt/my_dbt_project/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt --profile my_dbt_project run --project-dir=/opt/airflow/dags/dbt/my_dbt_project --models iris_processed --vars {"is_test": false, "data_date": "2025-04-22"}', 'send_anonymous_usage_stats': 'True'}
+[0m14:14:52.221104 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:14:52.423936 [debug] [MainThread]: checksum: a4a9aead84b43dddec45e3453377ef7f8d5e89716f37693f60423ed41c2ad7cb, vars: {'data_date': '2025-04-22', 'is_test': False}, profile: my_dbt_project, target: , version: 1.9.4
+[0m14:14:52.666284 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m14:14:55.249871 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- seeds.my_dbt_project.iris_dataset
+[0m14:14:55.446361 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m14:14:55.463110 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m14:14:55.492684 [info ] [MainThread]: Found 3 models, 1 source, 433 macros
+[0m14:14:55.495278 [info ] [MainThread]: 
+[0m14:14:55.496880 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:14:55.498439 [info ] [MainThread]: 
+[0m14:14:55.501128 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:14:55.503844 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics'
+[0m14:14:55.619506 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m14:14:55.621745 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:14:55.623382 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:14:55.635159 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.012 seconds
+[0m14:14:55.638126 [debug] [ThreadPool]: On list_analytics: Close
+[0m14:14:55.647295 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now list_analytics_analytics)
+[0m14:14:55.659310 [debug] [ThreadPool]: Using postgres connection "list_analytics_analytics"
+[0m14:14:55.661147 [debug] [ThreadPool]: On list_analytics_analytics: BEGIN
+[0m14:14:55.663141 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:14:55.673261 [debug] [ThreadPool]: SQL status: BEGIN in 0.010 seconds
+[0m14:14:55.676376 [debug] [ThreadPool]: Using postgres connection "list_analytics_analytics"
+[0m14:14:55.679170 [debug] [ThreadPool]: On list_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_analytics_analytics"} */
+select
+      'analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m14:14:55.688568 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.008 seconds
+[0m14:14:55.691682 [debug] [ThreadPool]: On list_analytics_analytics: ROLLBACK
+[0m14:14:55.693442 [debug] [ThreadPool]: On list_analytics_analytics: Close
+[0m14:14:55.704607 [debug] [MainThread]: Using postgres connection "master"
+[0m14:14:55.706490 [debug] [MainThread]: On master: BEGIN
+[0m14:14:55.708123 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:14:55.720515 [debug] [MainThread]: SQL status: BEGIN in 0.012 seconds
+[0m14:14:55.724059 [debug] [MainThread]: Using postgres connection "master"
+[0m14:14:55.727448 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:14:55.737238 [debug] [MainThread]: SQL status: SELECT 0 in 0.007 seconds
+[0m14:14:55.740334 [debug] [MainThread]: On master: ROLLBACK
+[0m14:14:55.742318 [debug] [MainThread]: Using postgres connection "master"
+[0m14:14:55.744277 [debug] [MainThread]: On master: BEGIN
+[0m14:14:55.747066 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m14:14:55.750473 [debug] [MainThread]: On master: COMMIT
+[0m14:14:55.753405 [debug] [MainThread]: Using postgres connection "master"
+[0m14:14:55.755128 [debug] [MainThread]: On master: COMMIT
+[0m14:14:55.757497 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:14:55.759499 [debug] [MainThread]: On master: Close
+[0m14:14:55.769582 [debug] [Thread-1  ]: Began running node model.my_dbt_project.iris_processed
+[0m14:14:55.772032 [info ] [Thread-1  ]: 1 of 1 START sql table model analytics.iris_processed .......................... [RUN]
+[0m14:14:55.773972 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_analytics_analytics, now model.my_dbt_project.iris_processed)
+[0m14:14:55.776218 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.iris_processed
+[0m14:14:55.822737 [debug] [Thread-1  ]: Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m14:14:55.827480 [error] [Thread-1  ]: 1 of 1 ERROR creating sql table model analytics.iris_processed ................. [[31mERROR[0m in 0.05s]
+[0m14:14:55.829983 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.iris_processed
+[0m14:14:55.832103 [debug] [Thread-7  ]: Marking all children of 'model.my_dbt_project.iris_processed' to be skipped because of status 'error'.  Reason: Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps"..
+[0m14:14:55.836685 [debug] [MainThread]: Using postgres connection "master"
+[0m14:14:55.838610 [debug] [MainThread]: On master: BEGIN
+[0m14:14:55.840263 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:14:55.849905 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m14:14:55.853394 [debug] [MainThread]: On master: COMMIT
+[0m14:14:55.855983 [debug] [MainThread]: Using postgres connection "master"
+[0m14:14:55.858194 [debug] [MainThread]: On master: COMMIT
+[0m14:14:55.860624 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:14:55.862345 [debug] [MainThread]: On master: Close
+[0m14:14:55.864121 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:14:55.865396 [debug] [MainThread]: Connection 'model.my_dbt_project.iris_processed' was properly closed.
+[0m14:14:55.867187 [info ] [MainThread]: 
+[0m14:14:55.869500 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.37 seconds (0.37s).
+[0m14:14:55.872038 [debug] [MainThread]: Command end result
+[0m14:14:55.953277 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m14:14:55.962508 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m14:14:55.982110 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dags/dbt/my_dbt_project/target/run_results.json
+[0m14:14:55.984354 [info ] [MainThread]: 
+[0m14:14:55.986786 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:14:55.988861 [info ] [MainThread]: 
+[0m14:14:55.990948 [error] [MainThread]:   Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m14:14:55.993990 [info ] [MainThread]: 
+[0m14:14:55.996544 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m14:14:56.000848 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 4.3816996, "process_in_blocks": "1704", "process_kernel_time": 0.179602, "process_mem_max_rss": "117596", "process_out_blocks": "0", "process_user_time": 6.545508}
+[0m14:14:56.004275 [debug] [MainThread]: Command `dbt run` failed at 14:14:56.003854 after 4.39 seconds
+[0m14:14:56.007296 [debug] [MainThread]: Flushing usage events
+[0m14:20:00.253255 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 14:20:00.264143 | d3595a1d-3251-48f8-a6d6-46f314f66a1a ==============================
+[0m14:20:00.264143 [info ] [MainThread]: Running with dbt=1.9.4
+[0m14:20:00.266723 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/opt/airflow/dags/dbt/my_dbt_project/logs', 'debug': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt --profile my_dbt_project run --project-dir=/opt/airflow/dags/dbt/my_dbt_project --models iris_processed --vars {"is_test": false, "data_date": "2025-04-22"}', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:20:00.667043 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:20:00.832027 [debug] [MainThread]: checksum: a4a9aead84b43dddec45e3453377ef7f8d5e89716f37693f60423ed41c2ad7cb, vars: {'data_date': '2025-04-22', 'is_test': False}, profile: my_dbt_project, target: , version: 1.9.4
+[0m14:20:01.188623 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:20:01.190443 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:20:01.202792 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- seeds.my_dbt_project.iris_dataset
+[0m14:20:01.430697 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m14:20:01.447809 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m14:20:01.524283 [info ] [MainThread]: Found 3 models, 1 source, 433 macros
+[0m14:20:01.526955 [info ] [MainThread]: 
+[0m14:20:01.528528 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:20:01.529943 [info ] [MainThread]: 
+[0m14:20:01.531658 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:20:01.533939 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics'
+[0m14:20:01.587066 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m14:20:01.589850 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:20:01.591705 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:20:01.603141 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.011 seconds
+[0m14:20:01.606347 [debug] [ThreadPool]: On list_analytics: Close
+[0m14:20:01.614853 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now list_analytics_analytics)
+[0m14:20:01.627259 [debug] [ThreadPool]: Using postgres connection "list_analytics_analytics"
+[0m14:20:01.629175 [debug] [ThreadPool]: On list_analytics_analytics: BEGIN
+[0m14:20:01.630829 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:20:01.641270 [debug] [ThreadPool]: SQL status: BEGIN in 0.010 seconds
+[0m14:20:01.644869 [debug] [ThreadPool]: Using postgres connection "list_analytics_analytics"
+[0m14:20:01.648383 [debug] [ThreadPool]: On list_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_analytics_analytics"} */
+select
+      'analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m14:20:01.656171 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.005 seconds
+[0m14:20:01.659188 [debug] [ThreadPool]: On list_analytics_analytics: ROLLBACK
+[0m14:20:01.660974 [debug] [ThreadPool]: On list_analytics_analytics: Close
+[0m14:20:01.671230 [debug] [MainThread]: Using postgres connection "master"
+[0m14:20:01.673525 [debug] [MainThread]: On master: BEGIN
+[0m14:20:01.675995 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:20:01.688711 [debug] [MainThread]: SQL status: BEGIN in 0.013 seconds
+[0m14:20:01.691570 [debug] [MainThread]: Using postgres connection "master"
+[0m14:20:01.694861 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:20:01.703609 [debug] [MainThread]: SQL status: SELECT 0 in 0.005 seconds
+[0m14:20:01.707699 [debug] [MainThread]: On master: ROLLBACK
+[0m14:20:01.710205 [debug] [MainThread]: Using postgres connection "master"
+[0m14:20:01.712531 [debug] [MainThread]: On master: BEGIN
+[0m14:20:01.715767 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m14:20:01.721654 [debug] [MainThread]: On master: COMMIT
+[0m14:20:01.725019 [debug] [MainThread]: Using postgres connection "master"
+[0m14:20:01.727778 [debug] [MainThread]: On master: COMMIT
+[0m14:20:01.730448 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:20:01.732431 [debug] [MainThread]: On master: Close
+[0m14:20:01.743463 [debug] [Thread-1  ]: Began running node model.my_dbt_project.iris_processed
+[0m14:20:01.746162 [info ] [Thread-1  ]: 1 of 1 START sql table model analytics.iris_processed .......................... [RUN]
+[0m14:20:01.748970 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_analytics_analytics, now model.my_dbt_project.iris_processed)
+[0m14:20:01.750996 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.iris_processed
+[0m14:20:01.789200 [debug] [Thread-1  ]: Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m14:20:01.793245 [error] [Thread-1  ]: 1 of 1 ERROR creating sql table model analytics.iris_processed ................. [[31mERROR[0m in 0.04s]
+[0m14:20:01.795289 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.iris_processed
+[0m14:20:01.797265 [debug] [Thread-7  ]: Marking all children of 'model.my_dbt_project.iris_processed' to be skipped because of status 'error'.  Reason: Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps"..
+[0m14:20:01.800778 [debug] [MainThread]: Using postgres connection "master"
+[0m14:20:01.802833 [debug] [MainThread]: On master: BEGIN
+[0m14:20:01.804762 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:20:01.813970 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m14:20:01.817313 [debug] [MainThread]: On master: COMMIT
+[0m14:20:01.820657 [debug] [MainThread]: Using postgres connection "master"
+[0m14:20:01.823531 [debug] [MainThread]: On master: COMMIT
+[0m14:20:01.826762 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:20:01.829320 [debug] [MainThread]: On master: Close
+[0m14:20:01.831075 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:20:01.832887 [debug] [MainThread]: Connection 'model.my_dbt_project.iris_processed' was properly closed.
+[0m14:20:01.834551 [info ] [MainThread]: 
+[0m14:20:01.837410 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.30 seconds (0.30s).
+[0m14:20:01.839756 [debug] [MainThread]: Command end result
+[0m14:20:01.942018 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m14:20:01.958298 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m14:20:01.989640 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dags/dbt/my_dbt_project/target/run_results.json
+[0m14:20:01.991532 [info ] [MainThread]: 
+[0m14:20:01.993563 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:20:01.995762 [info ] [MainThread]: 
+[0m14:20:01.998105 [error] [MainThread]:   Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m14:20:02.000040 [info ] [MainThread]: 
+[0m14:20:02.002288 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m14:20:02.007059 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.8667035, "process_in_blocks": "0", "process_kernel_time": 0.217827, "process_mem_max_rss": "112488", "process_out_blocks": "0", "process_user_time": 3.712961}
+[0m14:20:02.009514 [debug] [MainThread]: Command `dbt run` failed at 14:20:02.009280 after 1.87 seconds
+[0m14:20:02.011012 [debug] [MainThread]: Flushing usage events
+[0m14:54:44.168776 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 14:54:44.181139 | a34727fc-f27c-4ece-bed4-a2de60c8a735 ==============================
+[0m14:54:44.181139 [info ] [MainThread]: Running with dbt=1.9.4
+[0m14:54:44.186377 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/opt/airflow/dags/dbt/my_dbt_project/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt --profile my_dbt_project run --project-dir=/opt/airflow/dags/dbt/my_dbt_project --models iris_processed --vars {"is_test": false, "data_date": "2025-04-22"}', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:54:44.682188 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:54:44.853700 [debug] [MainThread]: checksum: a4a9aead84b43dddec45e3453377ef7f8d5e89716f37693f60423ed41c2ad7cb, vars: {'data_date': '2025-04-22', 'is_test': False}, profile: my_dbt_project, target: , version: 1.9.4
+[0m14:54:45.319495 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:54:45.322517 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:54:45.338590 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- seeds.my_dbt_project.iris_dataset
+[0m14:54:45.623199 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m14:54:45.662494 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m14:54:45.799039 [info ] [MainThread]: Found 3 models, 1 source, 433 macros
+[0m14:54:45.804971 [info ] [MainThread]: 
+[0m14:54:45.806756 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:54:45.808146 [info ] [MainThread]: 
+[0m14:54:45.809768 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:54:45.811854 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics'
+[0m14:54:45.875631 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m14:54:45.877570 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:54:45.879766 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:54:45.893961 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.014 seconds
+[0m14:54:45.897380 [debug] [ThreadPool]: On list_analytics: Close
+[0m14:54:45.913571 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now list_analytics_analytics)
+[0m14:54:45.934339 [debug] [ThreadPool]: Using postgres connection "list_analytics_analytics"
+[0m14:54:45.936642 [debug] [ThreadPool]: On list_analytics_analytics: BEGIN
+[0m14:54:45.938630 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:54:45.952470 [debug] [ThreadPool]: SQL status: BEGIN in 0.014 seconds
+[0m14:54:45.955349 [debug] [ThreadPool]: Using postgres connection "list_analytics_analytics"
+[0m14:54:45.958754 [debug] [ThreadPool]: On list_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_analytics_analytics"} */
+select
+      'analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m14:54:45.970724 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.008 seconds
+[0m14:54:45.974427 [debug] [ThreadPool]: On list_analytics_analytics: ROLLBACK
+[0m14:54:45.976837 [debug] [ThreadPool]: On list_analytics_analytics: Close
+[0m14:54:45.989760 [debug] [MainThread]: Using postgres connection "master"
+[0m14:54:45.991964 [debug] [MainThread]: On master: BEGIN
+[0m14:54:45.994399 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:54:46.008964 [debug] [MainThread]: SQL status: BEGIN in 0.015 seconds
+[0m14:54:46.011551 [debug] [MainThread]: Using postgres connection "master"
+[0m14:54:46.014906 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:54:46.027321 [debug] [MainThread]: SQL status: SELECT 0 in 0.009 seconds
+[0m14:54:46.031080 [debug] [MainThread]: On master: ROLLBACK
+[0m14:54:46.033062 [debug] [MainThread]: Using postgres connection "master"
+[0m14:54:46.039782 [debug] [MainThread]: On master: BEGIN
+[0m14:54:46.043378 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m14:54:46.047508 [debug] [MainThread]: On master: COMMIT
+[0m14:54:46.054245 [debug] [MainThread]: Using postgres connection "master"
+[0m14:54:46.057983 [debug] [MainThread]: On master: COMMIT
+[0m14:54:46.059899 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:54:46.061727 [debug] [MainThread]: On master: Close
+[0m14:54:46.074323 [debug] [Thread-1  ]: Began running node model.my_dbt_project.iris_processed
+[0m14:54:46.076581 [info ] [Thread-1  ]: 1 of 1 START sql table model analytics.iris_processed .......................... [RUN]
+[0m14:54:46.078496 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_analytics_analytics, now model.my_dbt_project.iris_processed)
+[0m14:54:46.080226 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.iris_processed
+[0m14:54:46.159168 [debug] [Thread-1  ]: Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m14:54:46.164846 [error] [Thread-1  ]: 1 of 1 ERROR creating sql table model analytics.iris_processed ................. [[31mERROR[0m in 0.08s]
+[0m14:54:46.167390 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.iris_processed
+[0m14:54:46.171635 [debug] [Thread-7  ]: Marking all children of 'model.my_dbt_project.iris_processed' to be skipped because of status 'error'.  Reason: Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps"..
+[0m14:54:46.175285 [debug] [MainThread]: Using postgres connection "master"
+[0m14:54:46.176693 [debug] [MainThread]: On master: BEGIN
+[0m14:54:46.177988 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:54:46.190243 [debug] [MainThread]: SQL status: BEGIN in 0.012 seconds
+[0m14:54:46.192741 [debug] [MainThread]: On master: COMMIT
+[0m14:54:46.194703 [debug] [MainThread]: Using postgres connection "master"
+[0m14:54:46.196927 [debug] [MainThread]: On master: COMMIT
+[0m14:54:46.198721 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:54:46.203587 [debug] [MainThread]: On master: Close
+[0m14:54:46.206493 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:54:46.208534 [debug] [MainThread]: Connection 'model.my_dbt_project.iris_processed' was properly closed.
+[0m14:54:46.210331 [info ] [MainThread]: 
+[0m14:54:46.212159 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.40 seconds (0.40s).
+[0m14:54:46.215031 [debug] [MainThread]: Command end result
+[0m14:54:46.314849 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m14:54:46.326487 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m14:54:46.346675 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dags/dbt/my_dbt_project/target/run_results.json
+[0m14:54:46.348359 [info ] [MainThread]: 
+[0m14:54:46.351213 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:54:46.354150 [info ] [MainThread]: 
+[0m14:54:46.355916 [error] [MainThread]:   Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m14:54:46.357521 [info ] [MainThread]: 
+[0m14:54:46.358957 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m14:54:46.361841 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.3390992, "process_in_blocks": "0", "process_kernel_time": 0.20674, "process_mem_max_rss": "112472", "process_out_blocks": "0", "process_user_time": 4.59752}
+[0m14:54:46.363617 [debug] [MainThread]: Command `dbt run` failed at 14:54:46.363414 after 2.34 seconds
+[0m14:54:46.365204 [debug] [MainThread]: Flushing usage events
+[0m14:59:50.778600 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 14:59:50.789483 | ac50a2c9-57af-43d1-a28c-d4f157cf548f ==============================
+[0m14:59:50.789483 [info ] [MainThread]: Running with dbt=1.9.4
+[0m14:59:50.794103 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'log_path': '/opt/airflow/dags/dbt/my_dbt_project/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt --profile my_dbt_project run --project-dir=/opt/airflow/dags/dbt/my_dbt_project --models iris_processed --vars {"is_test": false, "data_date": "2025-04-22"}', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:59:51.172808 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:59:51.320632 [debug] [MainThread]: checksum: a4a9aead84b43dddec45e3453377ef7f8d5e89716f37693f60423ed41c2ad7cb, vars: {'data_date': '2025-04-22', 'is_test': False}, profile: my_dbt_project, target: , version: 1.9.4
+[0m14:59:51.644693 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:59:51.646427 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:59:51.657135 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- seeds.my_dbt_project.iris_dataset
+[0m14:59:51.864612 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m14:59:51.880045 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m14:59:51.963655 [info ] [MainThread]: Found 3 models, 1 source, 433 macros
+[0m14:59:51.966217 [info ] [MainThread]: 
+[0m14:59:51.967636 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:59:51.969348 [info ] [MainThread]: 
+[0m14:59:51.970956 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:59:51.973156 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics'
+[0m14:59:52.023460 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m14:59:52.025259 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:59:52.027281 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:59:52.041097 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.014 seconds
+[0m14:59:52.044543 [debug] [ThreadPool]: On list_analytics: Close
+[0m14:59:52.054491 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now list_analytics_analytics)
+[0m14:59:52.067125 [debug] [ThreadPool]: Using postgres connection "list_analytics_analytics"
+[0m14:59:52.069439 [debug] [ThreadPool]: On list_analytics_analytics: BEGIN
+[0m14:59:52.071800 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:59:52.085566 [debug] [ThreadPool]: SQL status: BEGIN in 0.014 seconds
+[0m14:59:52.090006 [debug] [ThreadPool]: Using postgres connection "list_analytics_analytics"
+[0m14:59:52.093394 [debug] [ThreadPool]: On list_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_analytics_analytics"} */
+select
+      'analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m14:59:52.101359 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.004 seconds
+[0m14:59:52.105952 [debug] [ThreadPool]: On list_analytics_analytics: ROLLBACK
+[0m14:59:52.108516 [debug] [ThreadPool]: On list_analytics_analytics: Close
+[0m14:59:52.124072 [debug] [MainThread]: Using postgres connection "master"
+[0m14:59:52.126472 [debug] [MainThread]: On master: BEGIN
+[0m14:59:52.128524 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:59:52.140643 [debug] [MainThread]: SQL status: BEGIN in 0.012 seconds
+[0m14:59:52.144011 [debug] [MainThread]: Using postgres connection "master"
+[0m14:59:52.146836 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:59:52.153675 [debug] [MainThread]: SQL status: SELECT 0 in 0.004 seconds
+[0m14:59:52.157653 [debug] [MainThread]: On master: ROLLBACK
+[0m14:59:52.160369 [debug] [MainThread]: Using postgres connection "master"
+[0m14:59:52.163080 [debug] [MainThread]: On master: BEGIN
+[0m14:59:52.166388 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m14:59:52.169877 [debug] [MainThread]: On master: COMMIT
+[0m14:59:52.172827 [debug] [MainThread]: Using postgres connection "master"
+[0m14:59:52.176132 [debug] [MainThread]: On master: COMMIT
+[0m14:59:52.178546 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:59:52.180712 [debug] [MainThread]: On master: Close
+[0m14:59:52.192255 [debug] [Thread-1  ]: Began running node model.my_dbt_project.iris_processed
+[0m14:59:52.195057 [info ] [Thread-1  ]: 1 of 1 START sql table model analytics.iris_processed .......................... [RUN]
+[0m14:59:52.197447 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_analytics_analytics, now model.my_dbt_project.iris_processed)
+[0m14:59:52.199341 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.iris_processed
+[0m14:59:52.250370 [debug] [Thread-1  ]: Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m14:59:52.255340 [error] [Thread-1  ]: 1 of 1 ERROR creating sql table model analytics.iris_processed ................. [[31mERROR[0m in 0.06s]
+[0m14:59:52.257599 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.iris_processed
+[0m14:59:52.259755 [debug] [Thread-7  ]: Marking all children of 'model.my_dbt_project.iris_processed' to be skipped because of status 'error'.  Reason: Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps"..
+[0m14:59:52.263250 [debug] [MainThread]: Using postgres connection "master"
+[0m14:59:52.264977 [debug] [MainThread]: On master: BEGIN
+[0m14:59:52.267019 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:59:52.284695 [debug] [MainThread]: SQL status: BEGIN in 0.017 seconds
+[0m14:59:52.288079 [debug] [MainThread]: On master: COMMIT
+[0m14:59:52.291274 [debug] [MainThread]: Using postgres connection "master"
+[0m14:59:52.294399 [debug] [MainThread]: On master: COMMIT
+[0m14:59:52.297729 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:59:52.300501 [debug] [MainThread]: On master: Close
+[0m14:59:52.303723 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:59:52.306424 [debug] [MainThread]: Connection 'model.my_dbt_project.iris_processed' was properly closed.
+[0m14:59:52.308745 [info ] [MainThread]: 
+[0m14:59:52.310789 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.34 seconds (0.34s).
+[0m14:59:52.313522 [debug] [MainThread]: Command end result
+[0m14:59:52.403751 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m14:59:52.413688 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m14:59:52.431539 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dags/dbt/my_dbt_project/target/run_results.json
+[0m14:59:52.433424 [info ] [MainThread]: 
+[0m14:59:52.435244 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:59:52.437360 [info ] [MainThread]: 
+[0m14:59:52.439387 [error] [MainThread]:   Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m14:59:52.441337 [info ] [MainThread]: 
+[0m14:59:52.443183 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m14:59:52.445782 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.7721496, "process_in_blocks": "8", "process_kernel_time": 0.158969, "process_mem_max_rss": "112444", "process_out_blocks": "0", "process_user_time": 3.626498}
+[0m14:59:52.447971 [debug] [MainThread]: Command `dbt run` failed at 14:59:52.447722 after 1.77 seconds
+[0m14:59:52.449586 [debug] [MainThread]: Flushing usage events
+[0m15:18:25.932327 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 15:18:25.947349 | e78b6948-d57d-47b8-8582-96db4a538129 ==============================
+[0m15:18:25.947349 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:18:25.950375 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/dags/dbt/my_dbt_project/logs', 'fail_fast': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt --profile my_dbt_project run --project-dir=/opt/airflow/dags/dbt/my_dbt_project --models iris_processed --vars {"is_test": false, "data_date": "2025-04-22"}', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:18:26.526783 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m15:18:26.750966 [debug] [MainThread]: checksum: a4a9aead84b43dddec45e3453377ef7f8d5e89716f37693f60423ed41c2ad7cb, vars: {'data_date': '2025-04-22', 'is_test': False}, profile: my_dbt_project, target: , version: 1.9.4
+[0m15:18:27.268521 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:18:27.270448 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:18:27.293931 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- seeds.my_dbt_project.iris_dataset
+[0m15:18:27.586607 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m15:18:27.605964 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m15:18:27.696356 [info ] [MainThread]: Found 3 models, 1 source, 433 macros
+[0m15:18:27.699436 [info ] [MainThread]: 
+[0m15:18:27.701083 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:18:27.702803 [info ] [MainThread]: 
+[0m15:18:27.704853 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:18:27.708005 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics'
+[0m15:18:27.776934 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m15:18:27.779051 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:18:27.780980 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:18:27.794214 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.013 seconds
+[0m15:18:27.797858 [debug] [ThreadPool]: On list_analytics: Close
+[0m15:18:27.808897 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now list_analytics_analytics)
+[0m15:18:27.823658 [debug] [ThreadPool]: Using postgres connection "list_analytics_analytics"
+[0m15:18:27.825752 [debug] [ThreadPool]: On list_analytics_analytics: BEGIN
+[0m15:18:27.827666 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:18:27.838565 [debug] [ThreadPool]: SQL status: BEGIN in 0.011 seconds
+[0m15:18:27.841159 [debug] [ThreadPool]: Using postgres connection "list_analytics_analytics"
+[0m15:18:27.843621 [debug] [ThreadPool]: On list_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_analytics_analytics"} */
+select
+      'analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m15:18:27.850171 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.004 seconds
+[0m15:18:27.853610 [debug] [ThreadPool]: On list_analytics_analytics: ROLLBACK
+[0m15:18:27.855703 [debug] [ThreadPool]: On list_analytics_analytics: Close
+[0m15:18:27.867363 [debug] [MainThread]: Using postgres connection "master"
+[0m15:18:27.869552 [debug] [MainThread]: On master: BEGIN
+[0m15:18:27.871507 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:18:27.883761 [debug] [MainThread]: SQL status: BEGIN in 0.012 seconds
+[0m15:18:27.886240 [debug] [MainThread]: Using postgres connection "master"
+[0m15:18:27.888884 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m15:18:27.895864 [debug] [MainThread]: SQL status: SELECT 0 in 0.004 seconds
+[0m15:18:27.899800 [debug] [MainThread]: On master: ROLLBACK
+[0m15:18:27.902116 [debug] [MainThread]: Using postgres connection "master"
+[0m15:18:27.903983 [debug] [MainThread]: On master: BEGIN
+[0m15:18:27.906861 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m15:18:27.909810 [debug] [MainThread]: On master: COMMIT
+[0m15:18:27.912252 [debug] [MainThread]: Using postgres connection "master"
+[0m15:18:27.914685 [debug] [MainThread]: On master: COMMIT
+[0m15:18:27.917454 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m15:18:27.919495 [debug] [MainThread]: On master: Close
+[0m15:18:27.928686 [debug] [Thread-1  ]: Began running node model.my_dbt_project.iris_processed
+[0m15:18:27.931302 [info ] [Thread-1  ]: 1 of 1 START sql table model analytics.iris_processed .......................... [RUN]
+[0m15:18:27.933555 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_analytics_analytics, now model.my_dbt_project.iris_processed)
+[0m15:18:27.935488 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.iris_processed
+[0m15:18:27.990849 [debug] [Thread-1  ]: Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m15:18:27.995963 [error] [Thread-1  ]: 1 of 1 ERROR creating sql table model analytics.iris_processed ................. [[31mERROR[0m in 0.06s]
+[0m15:18:27.998441 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.iris_processed
+[0m15:18:28.000644 [debug] [Thread-7  ]: Marking all children of 'model.my_dbt_project.iris_processed' to be skipped because of status 'error'.  Reason: Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps"..
+[0m15:18:28.004546 [debug] [MainThread]: Using postgres connection "master"
+[0m15:18:28.006748 [debug] [MainThread]: On master: BEGIN
+[0m15:18:28.008862 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:18:28.020609 [debug] [MainThread]: SQL status: BEGIN in 0.012 seconds
+[0m15:18:28.023524 [debug] [MainThread]: On master: COMMIT
+[0m15:18:28.026555 [debug] [MainThread]: Using postgres connection "master"
+[0m15:18:28.029008 [debug] [MainThread]: On master: COMMIT
+[0m15:18:28.031180 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m15:18:28.033110 [debug] [MainThread]: On master: Close
+[0m15:18:28.035228 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:18:28.037285 [debug] [MainThread]: Connection 'model.my_dbt_project.iris_processed' was properly closed.
+[0m15:18:28.039209 [info ] [MainThread]: 
+[0m15:18:28.041723 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.33 seconds (0.33s).
+[0m15:18:28.044392 [debug] [MainThread]: Command end result
+[0m15:18:28.156086 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m15:18:28.167921 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m15:18:28.187476 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dags/dbt/my_dbt_project/target/run_results.json
+[0m15:18:28.189338 [info ] [MainThread]: 
+[0m15:18:28.192288 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:18:28.194152 [info ] [MainThread]: 
+[0m15:18:28.196031 [error] [MainThread]:   Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m15:18:28.197756 [info ] [MainThread]: 
+[0m15:18:28.199662 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m15:18:28.202302 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.3999884, "process_in_blocks": "0", "process_kernel_time": 0.293614, "process_mem_max_rss": "112580", "process_out_blocks": "0", "process_user_time": 5.725486}
+[0m15:18:28.204401 [debug] [MainThread]: Command `dbt run` failed at 15:18:28.204196 after 2.40 seconds
+[0m15:18:28.206292 [debug] [MainThread]: Flushing usage events
+[0m15:23:33.433363 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 15:23:33.456028 | 88ea3aed-cce0-45a9-aff2-b5594f46ab98 ==============================
+[0m15:23:33.456028 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:23:33.461507 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'log_path': '/opt/airflow/dags/dbt/my_dbt_project/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt --profile my_dbt_project run --project-dir=/opt/airflow/dags/dbt/my_dbt_project --models iris_processed --vars {"is_test": false, "data_date": "2025-04-22"}', 'send_anonymous_usage_stats': 'True'}
+[0m15:23:33.972144 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m15:23:34.252830 [debug] [MainThread]: checksum: a4a9aead84b43dddec45e3453377ef7f8d5e89716f37693f60423ed41c2ad7cb, vars: {'data_date': '2025-04-22', 'is_test': False}, profile: my_dbt_project, target: , version: 1.9.4
+[0m15:23:34.624919 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:23:34.627701 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:23:34.651307 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- seeds.my_dbt_project.iris_dataset
+[0m15:23:34.958358 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m15:23:34.978412 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m15:23:35.065804 [info ] [MainThread]: Found 3 models, 1 source, 433 macros
+[0m15:23:35.069552 [info ] [MainThread]: 
+[0m15:23:35.071441 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:23:35.073153 [info ] [MainThread]: 
+[0m15:23:35.075145 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:23:35.079220 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics'
+[0m15:23:35.151251 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m15:23:35.153350 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:23:35.155298 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:23:35.168098 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.013 seconds
+[0m15:23:35.171637 [debug] [ThreadPool]: On list_analytics: Close
+[0m15:23:35.182239 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now list_analytics_analytics)
+[0m15:23:35.197266 [debug] [ThreadPool]: Using postgres connection "list_analytics_analytics"
+[0m15:23:35.199422 [debug] [ThreadPool]: On list_analytics_analytics: BEGIN
+[0m15:23:35.201195 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:23:35.212116 [debug] [ThreadPool]: SQL status: BEGIN in 0.011 seconds
+[0m15:23:35.214371 [debug] [ThreadPool]: Using postgres connection "list_analytics_analytics"
+[0m15:23:35.216727 [debug] [ThreadPool]: On list_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_analytics_analytics"} */
+select
+      'analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m15:23:35.223650 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.004 seconds
+[0m15:23:35.227192 [debug] [ThreadPool]: On list_analytics_analytics: ROLLBACK
+[0m15:23:35.229180 [debug] [ThreadPool]: On list_analytics_analytics: Close
+[0m15:23:35.240652 [debug] [MainThread]: Using postgres connection "master"
+[0m15:23:35.242699 [debug] [MainThread]: On master: BEGIN
+[0m15:23:35.244531 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:23:35.255678 [debug] [MainThread]: SQL status: BEGIN in 0.011 seconds
+[0m15:23:35.258070 [debug] [MainThread]: Using postgres connection "master"
+[0m15:23:35.261014 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m15:23:35.267984 [debug] [MainThread]: SQL status: SELECT 0 in 0.004 seconds
+[0m15:23:35.271653 [debug] [MainThread]: On master: ROLLBACK
+[0m15:23:35.273786 [debug] [MainThread]: Using postgres connection "master"
+[0m15:23:35.275572 [debug] [MainThread]: On master: BEGIN
+[0m15:23:35.278518 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m15:23:35.280683 [debug] [MainThread]: On master: COMMIT
+[0m15:23:35.282645 [debug] [MainThread]: Using postgres connection "master"
+[0m15:23:35.284435 [debug] [MainThread]: On master: COMMIT
+[0m15:23:35.287104 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m15:23:35.289046 [debug] [MainThread]: On master: Close
+[0m15:23:35.296937 [debug] [Thread-1  ]: Began running node model.my_dbt_project.iris_processed
+[0m15:23:35.299182 [info ] [Thread-1  ]: 1 of 1 START sql table model analytics.iris_processed .......................... [RUN]
+[0m15:23:35.301111 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_analytics_analytics, now model.my_dbt_project.iris_processed)
+[0m15:23:35.302849 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.iris_processed
+[0m15:23:35.348188 [debug] [Thread-1  ]: Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m15:23:35.353025 [error] [Thread-1  ]: 1 of 1 ERROR creating sql table model analytics.iris_processed ................. [[31mERROR[0m in 0.05s]
+[0m15:23:35.355424 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.iris_processed
+[0m15:23:35.357979 [debug] [Thread-7  ]: Marking all children of 'model.my_dbt_project.iris_processed' to be skipped because of status 'error'.  Reason: Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps"..
+[0m15:23:35.361890 [debug] [MainThread]: Using postgres connection "master"
+[0m15:23:35.364309 [debug] [MainThread]: On master: BEGIN
+[0m15:23:35.366038 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:23:35.377114 [debug] [MainThread]: SQL status: BEGIN in 0.011 seconds
+[0m15:23:35.379168 [debug] [MainThread]: On master: COMMIT
+[0m15:23:35.381303 [debug] [MainThread]: Using postgres connection "master"
+[0m15:23:35.383248 [debug] [MainThread]: On master: COMMIT
+[0m15:23:35.385613 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m15:23:35.387742 [debug] [MainThread]: On master: Close
+[0m15:23:35.390228 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:23:35.392074 [debug] [MainThread]: Connection 'model.my_dbt_project.iris_processed' was properly closed.
+[0m15:23:35.394072 [info ] [MainThread]: 
+[0m15:23:35.395952 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.32 seconds (0.32s).
+[0m15:23:35.398401 [debug] [MainThread]: Command end result
+[0m15:23:35.542265 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/my_dbt_project/target/manifest.json
+[0m15:23:35.552069 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/my_dbt_project/target/semantic_manifest.json
+[0m15:23:35.578629 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dags/dbt/my_dbt_project/target/run_results.json
+[0m15:23:35.581857 [info ] [MainThread]: 
+[0m15:23:35.584810 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:23:35.587181 [info ] [MainThread]: 
+[0m15:23:35.590168 [error] [MainThread]:   Compilation Error in model iris_processed (models/mart/iris_processed.sql)
+  'dbt_ml_inline_preprocessing' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m15:23:35.593606 [info ] [MainThread]: 
+[0m15:23:35.596369 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m15:23:35.599991 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.3969908, "process_in_blocks": "0", "process_kernel_time": 0.247436, "process_mem_max_rss": "113012", "process_out_blocks": "0", "process_user_time": 4.889351}
+[0m15:23:35.603261 [debug] [MainThread]: Command `dbt run` failed at 15:23:35.602786 after 2.40 seconds
+[0m15:23:35.606021 [debug] [MainThread]: Flushing usage events
