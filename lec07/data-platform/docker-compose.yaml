@@ -5,7 +5,7 @@ services:
     container_name: analytics_db
     environment:
       - POSTGRES_USER=${POSTGRES_ANALYTICS_DATAUSER}
-      - POSTGRES_PASSWORD=${POSTGRES_ANALYTICS_DATAUSER}
+      - POSTGRES_PASSWORD=${POSTGRES_ANALYTICS_DATAPASSWORD}
       - POSTGRES_DB=${POSTGRES_ANALYTICS_DB}
       - ANALYTICS_READONLY_USER=${ANALYTICS_READONLY_USER}
       - ANALYTICS_READONLY_PASSWORD=${ANALYTICS_READONLY_PASSWORD}
@@ -58,7 +58,7 @@ services:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/plugins:/opt/airflow/plugins
       - ./dbt:/opt/airflow/dbt
-      - ./dbt/packages.yaml:/opt/airflow/dbt/packages.yaml
+      - ./dbt/packages:/opt/airflow/dbt/packages.yml
       - airflow_logs:/opt/airflow/logs
       - ml_models:/opt/airflow/models
       - ml_results:/opt/airflow/inference_results
@@ -103,7 +103,7 @@ services:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/plugins:/opt/airflow/plugins
       - ./dbt:/opt/airflow/dbt
-      - ./dbt/packages.yaml:/opt/airflow/dbt/packages.yaml
+      - ./dbt/packages:/opt/airflow/dbt/packages.yml
       - airflow_logs:/opt/airflow/logs
       - ml_models:/opt/airflow/models
       - ml_results:/opt/airflow/inference_results
