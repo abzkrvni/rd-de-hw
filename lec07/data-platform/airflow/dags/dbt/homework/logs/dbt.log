@@ -1,0 +1,58 @@
+[0m12:54:38.373681 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad945eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaca43850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaca437f0>]}
+
+
+============================== 12:54:38.378905 | ee344545-a8b0-40bd-a2d8-eba9dc2e6ce1 ==============================
+[0m12:54:38.378905 [info ] [MainThread]: Running with dbt=1.9.4
+[0m12:54:38.379445 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/opt/airflow/dags/dbt/homework/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt deps --profiles-dir /opt/airflow/dags/dbt --project-dir /opt/airflow/dags/dbt/homework', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m12:54:38.459003 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ee344545-a8b0-40bd-a2d8-eba9dc2e6ce1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaca71400>]}
+[0m12:54:38.467224 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-dxsa9sx4'
+[0m12:54:38.467925 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m12:54:38.800487 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m12:54:38.801229 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/Matts52/dbt_ml_inline_preprocessing.json
+[0m12:54:38.988139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81dd8ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80ec3940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80ec38e0>]}
+
+
+============================== 12:54:38.993266 | f89b730e-b38f-4130-bd8e-1e7f06a0f73a ==============================
+[0m12:54:38.993266 [info ] [MainThread]: Running with dbt=1.9.4
+[0m12:54:38.993991 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/dags/dbt/homework/logs', 'fail_fast': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt deps --profiles-dir /opt/airflow/dags/dbt --project-dir /opt/airflow/dags/dbt/homework', 'send_anonymous_usage_stats': 'True'}
+[0m12:54:39.073680 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f89b730e-b38f-4130-bd8e-1e7f06a0f73a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80fa6be0>]}
+[0m12:54:39.081925 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-9om3qyh3'
+[0m12:54:39.082560 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m12:54:39.218527 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/Matts52/dbt_ml_inline_preprocessing.json 200
+[0m12:54:39.222832 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m12:54:39.276361 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m12:54:39.277169 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/Matts52/dbt_ml_inline_preprocessing.json
+[0m12:54:39.394329 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m12:54:39.409383 [info ] [MainThread]: Updating lock file in file path: /opt/airflow/dags/dbt/homework/package-lock.yml
+[0m12:54:39.413084 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-_0i0vyv7'
+[0m12:54:39.417447 [info ] [MainThread]: Installing Matts52/dbt_ml_inline_preprocessing
+[0m12:54:39.452117 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/Matts52/dbt_ml_inline_preprocessing.json 200
+[0m12:54:39.456226 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m12:54:39.656871 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m12:54:39.674825 [info ] [MainThread]: Updating lock file in file path: /opt/airflow/dags/dbt/homework/package-lock.yml
+[0m12:54:39.680199 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-j7o2t4j4'
+[0m12:54:39.684631 [info ] [MainThread]: Installing Matts52/dbt_ml_inline_preprocessing
+[0m12:54:40.338743 [info ] [MainThread]: Installed from version 0.2.4
+[0m12:54:40.339202 [info ] [MainThread]: Up to date!
+[0m12:54:40.339531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'ee344545-a8b0-40bd-a2d8-eba9dc2e6ce1', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac9a7790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac8d6e50>]}
+[0m12:54:40.339877 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m12:54:40.535501 [info ] [MainThread]: Installed from version 0.2.4
+[0m12:54:40.536309 [info ] [MainThread]: Up to date!
+[0m12:54:40.536814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'f89b730e-b38f-4130-bd8e-1e7f06a0f73a', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff82b28940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80d56d00>]}
+[0m12:54:40.537381 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m12:54:40.929806 [info ] [MainThread]: Installed from version 1.3.0
+[0m12:54:40.930326 [info ] [MainThread]: Up to date!
+[0m12:54:40.930746 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'ee344545-a8b0-40bd-a2d8-eba9dc2e6ce1', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac9a7790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac8d6070>]}
+[0m12:54:40.931960 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 2.5952938, "process_in_blocks": "0", "process_kernel_time": 0.153433, "process_mem_max_rss": "89044", "process_out_blocks": "13550", "process_user_time": 1.534335}
+[0m12:54:40.932674 [debug] [MainThread]: Command `dbt deps` succeeded at 12:54:40.932560 after 2.60 seconds
+[0m12:54:40.933111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad945eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaca71400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac969af0>]}
+[0m12:54:40.933612 [debug] [MainThread]: Flushing usage events
+[0m12:54:41.168215 [info ] [MainThread]: Installed from version 1.3.0
+[0m12:54:41.168893 [info ] [MainThread]: Up to date!
+[0m12:54:41.169358 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'f89b730e-b38f-4130-bd8e-1e7f06a0f73a', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff82b28940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80d56df0>]}
+[0m12:54:41.170547 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 2.2171593, "process_in_blocks": "0", "process_kernel_time": 0.148388, "process_mem_max_rss": "88644", "process_out_blocks": "13550", "process_user_time": 1.544044}
+[0m12:54:41.171230 [debug] [MainThread]: Command `dbt deps` succeeded at 12:54:41.171132 after 2.22 seconds
+[0m12:54:41.171705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81dd8ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81c4eb20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80fa6cd0>]}
+[0m12:54:41.172150 [debug] [MainThread]: Flushing usage events
+[0m12:54:41.800802 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:54:41.801179 [debug] [MainThread]: An error was encountered while trying to flush usage events
