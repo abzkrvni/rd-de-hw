@@ -1,5 +1,10 @@
-with source as (
-    select * from {{ source('analytics', 'iris_dataset') }}
+
+  create view "analytics"."analytics"."stg_iris__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "analytics"."analytics"."iris_dataset"
 )
 
 select
@@ -9,3 +14,4 @@ select
     cast(petal_width as numeric) as petal_width,
     species
 from source
+  );

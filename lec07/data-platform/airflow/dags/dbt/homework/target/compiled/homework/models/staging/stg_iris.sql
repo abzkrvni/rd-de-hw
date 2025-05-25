@@ -1,5 +1,5 @@
 with source as (
-    select * from {{ source('analytics', 'iris_dataset') }}
+    select * from "analytics"."analytics"."iris_dataset"
 )
 
 select

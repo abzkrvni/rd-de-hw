@@ -17,8 +17,8 @@ def process_iris_data(**kwargs):
     pg_host = os.getenv('POSTGRES_ANALYTICS_HOST', 'postgres_analytics')
     pg_port = os.getenv('POSTGRES_PORT', '5432')
     pg_db = os.getenv('ANALYTICS_DB', 'analytics')
-    pg_user = os.getenv('ETL_USER', 'etl_user')
-    pg_password = os.getenv('ETL_PASSWORD', 'etl_password')
+    pg_user = os.getenv('POSTGRES_ANALYTICS_DATAUSER', 'datauser')
+    pg_password = os.getenv('POSTGRES_ANALYTICS_DATAPASSWORD', 'datauser')
     
     # Create SQLAlchemy engine for DataFrame operations
     conn_string = f"postgresql://{pg_user}:{pg_password}@{pg_host}:{pg_port}/{pg_db}"
@@ -26,7 +26,7 @@ def process_iris_data(**kwargs):
     
     # Query the processed Iris data from the dbt-transformed table
     query = """
-    SELECT * FROM homework.iris_processed
+    SELECT * FROM analytics.analytics.iris_processed
     """
     
     df = pd.read_sql(query, engine)
@@ -63,15 +63,15 @@ def process_iris_data(**kwargs):
     importances = clf.feature_importances_
     feature_names = X_train.columns
     feature_importance_df = pd.DataFrame({
-                              'Feature': feature_names,
-                              'Importance': importances
+                              'feature': feature_names,
+                              'importance': importances
                             })
     
     # Select the top 5 features
     top_features = feature_importance_df.sort_values(
-                      by='Importance',
+                      by='importance',
                       ascending=False
-                    ).head(5)['Feature'].tolist()
+                    ).head(5)['feature'].tolist()
     
     print(f"Top 5 features: {', '.join(top_features)}")
     
