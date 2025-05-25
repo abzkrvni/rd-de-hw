@@ -1,0 +1,1 @@
+{"_invocation_id": "d851a83c-8f46-4d78-bbb1-dd9c19a9953f", "linked": {"0": {"name": "source.homework.analytics.iris_dataset", "type": "source", "succ": [2]}, "1": {"name": "model.homework.iris_processed", "type": "model"}, "2": {"name": "model.homework.stg_iris", "type": "model", "succ": [1]}}}

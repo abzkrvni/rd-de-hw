@@ -1,78 +1,39 @@
-[0m12:54:38.373681 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad945eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaca43850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaca437f0>]}
+[0m17:27:24.877291 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59da0236d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59d91e23a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59d9dc0220>]}
 
 
-============================== 12:54:38.378905 | ee344545-a8b0-40bd-a2d8-eba9dc2e6ce1 ==============================
-[0m12:54:38.378905 [info ] [MainThread]: Running with dbt=1.9.4
-[0m12:54:38.379445 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/opt/airflow/dags/dbt/homework/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt deps --profiles-dir /opt/airflow/dags/dbt --project-dir /opt/airflow/dags/dbt/homework', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
-[0m12:54:38.459003 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ee344545-a8b0-40bd-a2d8-eba9dc2e6ce1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaca71400>]}
-[0m12:54:38.467224 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-dxsa9sx4'
-[0m12:54:38.467925 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
-[0m12:54:38.800487 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
-[0m12:54:38.801229 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/Matts52/dbt_ml_inline_preprocessing.json
-[0m12:54:38.988139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81dd8ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80ec3940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80ec38e0>]}
+============================== 17:27:24.890012 | e32f58cb-83e3-4138-99ff-4da093c4303c ==============================
+[0m17:27:24.890012 [info ] [MainThread]: Running with dbt=1.9.4
+[0m17:27:24.892136 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/opt/airflow/dags/dbt/homework/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt deps --profiles-dir /opt/airflow/dags/dbt --project-dir /opt/airflow/dags/dbt/homework', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m17:27:25.244844 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e32f58cb-83e3-4138-99ff-4da093c4303c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59d92290d0>]}
+[0m17:27:25.488903 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-3xef1c53'
+[0m17:27:25.490941 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m17:27:25.744583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff83386e6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff832981eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff832981e50>]}
 
 
-============================== 12:54:38.993266 | f89b730e-b38f-4130-bd8e-1e7f06a0f73a ==============================
-[0m12:54:38.993266 [info ] [MainThread]: Running with dbt=1.9.4
-[0m12:54:38.993991 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/dags/dbt/homework/logs', 'fail_fast': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt deps --profiles-dir /opt/airflow/dags/dbt --project-dir /opt/airflow/dags/dbt/homework', 'send_anonymous_usage_stats': 'True'}
-[0m12:54:39.073680 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f89b730e-b38f-4130-bd8e-1e7f06a0f73a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80fa6be0>]}
-[0m12:54:39.081925 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-9om3qyh3'
-[0m12:54:39.082560 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
-[0m12:54:39.218527 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/Matts52/dbt_ml_inline_preprocessing.json 200
-[0m12:54:39.222832 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
-[0m12:54:39.276361 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
-[0m12:54:39.277169 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/Matts52/dbt_ml_inline_preprocessing.json
-[0m12:54:39.394329 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
-[0m12:54:39.409383 [info ] [MainThread]: Updating lock file in file path: /opt/airflow/dags/dbt/homework/package-lock.yml
-[0m12:54:39.413084 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-_0i0vyv7'
-[0m12:54:39.417447 [info ] [MainThread]: Installing Matts52/dbt_ml_inline_preprocessing
-[0m12:54:39.452117 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/Matts52/dbt_ml_inline_preprocessing.json 200
-[0m12:54:39.456226 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
-[0m12:54:39.656871 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
-[0m12:54:39.674825 [info ] [MainThread]: Updating lock file in file path: /opt/airflow/dags/dbt/homework/package-lock.yml
-[0m12:54:39.680199 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-j7o2t4j4'
-[0m12:54:39.684631 [info ] [MainThread]: Installing Matts52/dbt_ml_inline_preprocessing
-[0m12:54:40.338743 [info ] [MainThread]: Installed from version 0.2.4
-[0m12:54:40.339202 [info ] [MainThread]: Up to date!
-[0m12:54:40.339531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'ee344545-a8b0-40bd-a2d8-eba9dc2e6ce1', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac9a7790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac8d6e50>]}
-[0m12:54:40.339877 [info ] [MainThread]: Installing dbt-labs/dbt_utils
-[0m12:54:40.535501 [info ] [MainThread]: Installed from version 0.2.4
-[0m12:54:40.536309 [info ] [MainThread]: Up to date!
-[0m12:54:40.536814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'f89b730e-b38f-4130-bd8e-1e7f06a0f73a', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff82b28940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80d56d00>]}
-[0m12:54:40.537381 [info ] [MainThread]: Installing dbt-labs/dbt_utils
-[0m12:54:40.929806 [info ] [MainThread]: Installed from version 1.3.0
-[0m12:54:40.930326 [info ] [MainThread]: Up to date!
-[0m12:54:40.930746 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'ee344545-a8b0-40bd-a2d8-eba9dc2e6ce1', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac9a7790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac8d6070>]}
-[0m12:54:40.931960 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 2.5952938, "process_in_blocks": "0", "process_kernel_time": 0.153433, "process_mem_max_rss": "89044", "process_out_blocks": "13550", "process_user_time": 1.534335}
-[0m12:54:40.932674 [debug] [MainThread]: Command `dbt deps` succeeded at 12:54:40.932560 after 2.60 seconds
-[0m12:54:40.933111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad945eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaca71400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac969af0>]}
-[0m12:54:40.933612 [debug] [MainThread]: Flushing usage events
-[0m12:54:41.168215 [info ] [MainThread]: Installed from version 1.3.0
-[0m12:54:41.168893 [info ] [MainThread]: Up to date!
-[0m12:54:41.169358 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'f89b730e-b38f-4130-bd8e-1e7f06a0f73a', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff82b28940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80d56df0>]}
-[0m12:54:41.170547 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 2.2171593, "process_in_blocks": "0", "process_kernel_time": 0.148388, "process_mem_max_rss": "88644", "process_out_blocks": "13550", "process_user_time": 1.544044}
-[0m12:54:41.171230 [debug] [MainThread]: Command `dbt deps` succeeded at 12:54:41.171132 after 2.22 seconds
-[0m12:54:41.171705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81dd8ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81c4eb20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80fa6cd0>]}
-[0m12:54:41.172150 [debug] [MainThread]: Flushing usage events
-[0m12:54:41.800802 [debug] [MainThread]: An error was encountered while trying to flush usage events
-[0m12:54:41.801179 [debug] [MainThread]: An error was encountered while trying to flush usage events
-[0m14:54:01.699606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30a5ac9670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30a5865fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30a4be3c70>]}
-
-
-============================== 14:54:01.712673 | 2ac97426-fd12-4831-a1ee-9b4baf68edd1 ==============================
-[0m14:54:01.712673 [info ] [MainThread]: Running with dbt=1.9.4
-[0m14:54:01.715188 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/opt/airflow/dags/dbt/homework/logs', 'version_check': 'True', 'profiles_dir': '/opt/airflow/dags/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt deps --profiles-dir /opt/airflow/dags/dbt --project-dir /opt/airflow/dags/dbt/homework', 'send_anonymous_usage_stats': 'True'}
-[0m14:54:01.998940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2ac97426-fd12-4831-a1ee-9b4baf68edd1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30a4e0b130>]}
-[0m14:54:02.127858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f89df3c5640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f89de4ded90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f89de4ded30>]}
-
-
-============================== 14:54:02.140639 | 69c539ed-2c07-43f6-a769-7af227221a70 ==============================
-[0m14:54:02.140639 [info ] [MainThread]: Running with dbt=1.9.4
-[0m14:54:02.142654 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/opt/airflow/dags/dbt/homework/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt deps --profiles-dir /opt/airflow/dags/dbt --project-dir /opt/airflow/dags/dbt/homework', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
-[0m14:54:02.465387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '69c539ed-2c07-43f6-a769-7af227221a70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f89debfddf0>]}
-[0m14:54:02.525440 [error] [MainThread]: Encountered an error:
-[Errno 2] No such file or directory: 'test_union_exclude_lowercase.sql'
-[0m14:54:02.533924 [error] [MainThread]: Traceback (most recent call last):
+============================== 17:27:25.758681 | 7549f981-a816-47b7-b4fa-20ce5c2b8d1f ==============================
+[0m17:27:25.758681 [info ] [MainThread]: Running with dbt=1.9.4
+[0m17:27:25.767369 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/opt/airflow/dags/dbt/homework/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt deps --profiles-dir /opt/airflow/dags/dbt --project-dir /opt/airflow/dags/dbt/homework', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:27:25.958775 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m17:27:25.961094 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/Matts52/dbt_ml_inline_preprocessing.json
+[0m17:27:26.050096 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7549f981-a816-47b7-b4fa-20ce5c2b8d1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8328fd280>]}
+[0m17:27:26.095876 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-n0mc0rk3'
+[0m17:27:26.098267 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m17:27:26.267643 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/Matts52/dbt_ml_inline_preprocessing.json 200
+[0m17:27:26.271300 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m17:27:26.272098 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m17:27:26.273902 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/Matts52/dbt_ml_inline_preprocessing.json
+[0m17:27:26.378164 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/Matts52/dbt_ml_inline_preprocessing.json 200
+[0m17:27:26.381293 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m17:27:26.490394 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m17:27:26.490542 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m17:27:26.501164 [info ] [MainThread]: Installing Matts52/dbt_ml_inline_preprocessing
+[0m17:27:26.501286 [info ] [MainThread]: Installing Matts52/dbt_ml_inline_preprocessing
+[0m17:27:27.822740 [error] [MainThread]: Encountered an error:
+[Errno 2] No such file or directory: 'dbt_packages/dbt-ml-inline-preprocessing-0.2.4/integration_tests/models/test_rare_category_encode.sql'
+[0m17:27:27.823349 [info ] [MainThread]: Installed from version 0.2.4
+[0m17:27:27.825758 [info ] [MainThread]: Up to date!
+[0m17:27:27.828149 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '7549f981-a816-47b7-b4fa-20ce5c2b8d1f', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8328dc2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff832871310>]}
+[0m17:27:27.828540 [error] [MainThread]: Traceback (most recent call last):
   File "/home/airflow/.local/lib/python3.9/site-packages/dbt/cli/requires.py", line 153, in wrapper
     result, success = func(*args, **kwargs)
   File "/home/airflow/.local/lib/python3.9/site-packages/dbt/cli/requires.py", line 103, in wrapper
@@ -83,47 +44,422 @@
     return func(*args, **kwargs)
   File "/home/airflow/.local/lib/python3.9/site-packages/dbt/cli/main.py", line 455, in deps
     results = task.run()
-  File "/home/airflow/.local/lib/python3.9/site-packages/dbt/task/deps.py", line 227, in run
-    system.rmtree(self.project.packages_install_path)
-  File "/home/airflow/.local/lib/python3.9/site-packages/dbt_common/clients/system.py", line 715, in rmtree
-    return shutil.rmtree(path, onerror=chmod_and_retry)
-  File "/usr/local/lib/python3.9/shutil.py", line 734, in rmtree
-    _rmtree_safe_fd(fd, path, onerror)
-  File "/usr/local/lib/python3.9/shutil.py", line 667, in _rmtree_safe_fd
-    _rmtree_safe_fd(dirfd, fullname, onerror)
-  File "/usr/local/lib/python3.9/shutil.py", line 667, in _rmtree_safe_fd
-    _rmtree_safe_fd(dirfd, fullname, onerror)
-  File "/usr/local/lib/python3.9/shutil.py", line 667, in _rmtree_safe_fd
-    _rmtree_safe_fd(dirfd, fullname, onerror)
-  [Previous line repeated 1 more time]
-  File "/usr/local/lib/python3.9/shutil.py", line 690, in _rmtree_safe_fd
-    onerror(os.unlink, fullname, sys.exc_info())
-  File "/usr/local/lib/python3.9/shutil.py", line 688, in _rmtree_safe_fd
-    os.unlink(entry.name, dir_fd=topfd)
-FileNotFoundError: [Errno 2] No such file or directory: 'test_union_exclude_lowercase.sql'
+  File "/home/airflow/.local/lib/python3.9/site-packages/dbt/task/deps.py", line 254, in run
+    package.install(self.project, renderer)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dbt/deps/registry.py", line 63, in install
+    self._install(project, renderer)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dbt/deps/base.py", line 121, in _install
+    connection_exception_retry(download_untar_fn, 5)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dbt_common/utils/connection.py", line 21, in connection_exception_retry
+    return fn()
+  File "/home/airflow/.local/lib/python3.9/site-packages/dbt/deps/base.py", line 133, in download_and_untar
+    system.untar_package(tar_path, deps_path, package_name)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dbt_common/clients/system.py", line 641, in untar_package
+    safe_extract(tarball, dest_dir)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dbt_common/clients/system.py", line 634, in safe_extract
+    tarball.extractall(path, members=members)
+  File "/usr/local/lib/python3.9/tarfile.py", line 2045, in extractall
+    self.extract(tarinfo, path, set_attrs=not tarinfo.isdir(),
+  File "/usr/local/lib/python3.9/tarfile.py", line 2086, in extract
+    self._extract_member(tarinfo, os.path.join(path, tarinfo.name),
+  File "/usr/local/lib/python3.9/tarfile.py", line 2159, in _extract_member
+    self.makefile(tarinfo, targetpath)
+  File "/usr/local/lib/python3.9/tarfile.py", line 2200, in makefile
+    with bltn_open(targetpath, "wb") as target:
+FileNotFoundError: [Errno 2] No such file or directory: 'dbt_packages/dbt-ml-inline-preprocessing-0.2.4/integration_tests/models/test_rare_category_encode.sql'
 
-[0m14:54:02.541737 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.56044257, "process_in_blocks": "160", "process_kernel_time": 0.289024, "process_mem_max_rss": "92296", "process_out_blocks": "5744", "process_user_time": 4.813746}
-[0m14:54:02.546544 [debug] [MainThread]: Command `dbt deps` failed at 14:54:02.546063 after 0.57 seconds
-[0m14:54:02.550221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f89df3c5640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f89de3c8f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f89de3c8e80>]}
-[0m14:54:02.554556 [debug] [MainThread]: Flushing usage events
-[0m14:54:02.806396 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-0w8t3rb_'
-[0m14:54:02.808618 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
-[0m14:54:03.007288 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
-[0m14:54:03.010318 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/Matts52/dbt_ml_inline_preprocessing.json
-[0m14:54:03.157961 [debug] [MainThread]: An error was encountered while trying to flush usage events
-[0m14:54:03.381750 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/Matts52/dbt_ml_inline_preprocessing.json 200
-[0m14:54:03.386932 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
-[0m14:54:03.495484 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
-[0m14:54:03.507161 [info ] [MainThread]: Installing Matts52/dbt_ml_inline_preprocessing
-[0m14:54:06.008923 [info ] [MainThread]: Installed from version 0.2.4
-[0m14:54:06.011090 [info ] [MainThread]: Up to date!
-[0m14:54:06.013238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '2ac97426-fd12-4831-a1ee-9b4baf68edd1', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30a4ad6340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30a4b48ca0>]}
-[0m14:54:06.015241 [info ] [MainThread]: Installing dbt-labs/dbt_utils
-[0m14:54:11.065012 [info ] [MainThread]: Installed from version 1.3.0
-[0m14:54:11.067095 [info ] [MainThread]: Up to date!
-[0m14:54:11.069449 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '2ac97426-fd12-4831-a1ee-9b4baf68edd1', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30a4ad6340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30a716d5b0>]}
-[0m14:54:11.072942 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 9.561837, "process_in_blocks": "4456", "process_kernel_time": 0.7413, "process_mem_max_rss": "95544", "process_out_blocks": "7048", "process_user_time": 5.129}
-[0m14:54:11.075768 [debug] [MainThread]: Command `dbt deps` succeeded at 14:54:11.075444 after 9.56 seconds
-[0m14:54:11.078326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30a5ac9670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30a5917580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30a52984f0>]}
-[0m14:54:11.080616 [debug] [MainThread]: Flushing usage events
-[0m14:54:11.575572 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:27:27.830560 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m17:27:27.833840 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 3.1185374, "process_in_blocks": "6864", "process_kernel_time": 0.318081, "process_mem_max_rss": "95404", "process_out_blocks": "6880", "process_user_time": 4.25434}
+[0m17:27:27.836873 [debug] [MainThread]: Command `dbt deps` failed at 17:27:27.836491 after 3.12 seconds
+[0m17:27:27.839929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59da0236d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59d9e625e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59d8f6e4f0>]}
+[0m17:27:27.842651 [debug] [MainThread]: Flushing usage events
+[0m17:27:28.417253 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:27:32.173376 [info ] [MainThread]: Installed from version 1.3.0
+[0m17:27:32.175012 [info ] [MainThread]: Up to date!
+[0m17:27:32.176946 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '7549f981-a816-47b7-b4fa-20ce5c2b8d1f', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8328dc2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff834c8ee80>]}
+[0m17:27:32.179921 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 6.5959196, "process_in_blocks": "64", "process_kernel_time": 0.482729, "process_mem_max_rss": "95252", "process_out_blocks": "7048", "process_user_time": 4.525585}
+[0m17:27:32.182072 [debug] [MainThread]: Command `dbt deps` succeeded at 17:27:32.181808 after 6.60 seconds
+[0m17:27:32.183974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff83386e6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8336a2e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff832871310>]}
+[0m17:27:32.185821 [debug] [MainThread]: Flushing usage events
+[0m17:27:32.702277 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:29:13.332748 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed65690a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed647b1460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed647b1400>]}
+
+
+============================== 17:29:13.346250 | 04a005f5-d778-4672-bab9-0523f4274257 ==============================
+[0m17:29:13.346250 [info ] [MainThread]: Running with dbt=1.9.4
+[0m17:29:13.348504 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/opt/airflow/dags/dbt/homework/logs', 'version_check': 'True', 'profiles_dir': '/opt/airflow/dags/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt --profile homework run --project-dir=/opt/airflow/dags/dbt/homework --vars {"is_test": false, "data_date": "2025-04-22"}', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:29:13.371492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d0a24fa00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d093703d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d09370370>]}
+
+
+============================== 17:29:13.385239 | 35df404d-b3f0-44f8-bc10-fbd105d6f71b ==============================
+[0m17:29:13.385239 [info ] [MainThread]: Running with dbt=1.9.4
+[0m17:29:13.387612 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/opt/airflow/dags/dbt/homework/logs', 'version_check': 'True', 'profiles_dir': '/opt/airflow/dags/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt --profile homework run --project-dir=/opt/airflow/dags/dbt/homework --vars {"is_test": false, "data_date": "2025-04-23"}', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:29:13.824273 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '04a005f5-d778-4672-bab9-0523f4274257', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed62fd75b0>]}
+[0m17:29:13.857332 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '35df404d-b3f0-44f8-bc10-fbd105d6f71b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d093b8220>]}
+[0m17:29:13.964858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '04a005f5-d778-4672-bab9-0523f4274257', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed6550da60>]}
+[0m17:29:13.967689 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m17:29:14.004651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '35df404d-b3f0-44f8-bc10-fbd105d6f71b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d09334f10>]}
+[0m17:29:14.007223 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m17:29:14.259394 [debug] [MainThread]: checksum: b4b46bb6a239f66694dfdd44ef1792882cb61f2fd7b1ea66b3c7a170d2bb602d, vars: {'data_date': '2025-04-22', 'is_test': False}, profile: homework, target: , version: 1.9.4
+[0m17:29:14.324832 [debug] [MainThread]: checksum: f5df654a850f4b74beb13fbe0c7d8863b5b1a20bd535c3ac287d70e390b64d41, vars: {'data_date': '2025-04-23', 'is_test': False}, profile: homework, target: , version: 1.9.4
+[0m17:29:14.596218 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m17:29:14.598067 [debug] [MainThread]: previous checksum: b4b46bb6a239f66694dfdd44ef1792882cb61f2fd7b1ea66b3c7a170d2bb602d, current checksum: f5df654a850f4b74beb13fbe0c7d8863b5b1a20bd535c3ac287d70e390b64d41
+[0m17:29:14.599710 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '04a005f5-d778-4672-bab9-0523f4274257', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed64ece2e0>]}
+[0m17:29:15.426915 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:29:15.428516 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:29:15.446682 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- seeds.homework.iris_dataset
+[0m17:29:15.595126 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '35df404d-b3f0-44f8-bc10-fbd105d6f71b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d0769b130>]}
+[0m17:29:15.929660 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/homework/target/manifest.json
+[0m17:29:15.949899 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/homework/target/semantic_manifest.json
+[0m17:29:15.990595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '35df404d-b3f0-44f8-bc10-fbd105d6f71b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d0763b3d0>]}
+[0m17:29:15.992971 [info ] [MainThread]: Found 2 models, 1 source, 587 macros
+[0m17:29:15.994699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '35df404d-b3f0-44f8-bc10-fbd105d6f71b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d093d75b0>]}
+[0m17:29:15.998362 [info ] [MainThread]: 
+[0m17:29:16.000116 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:29:16.002849 [info ] [MainThread]: 
+[0m17:29:16.008832 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:29:16.021203 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics'
+[0m17:29:16.104613 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m17:29:16.106660 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "homework", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:29:16.108404 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:29:16.125756 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.017 seconds
+[0m17:29:16.129368 [debug] [ThreadPool]: On list_analytics: Close
+[0m17:29:16.132068 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now create_analytics_homework)
+[0m17:29:16.134149 [debug] [ThreadPool]: Creating schema "database: "analytics"
+schema: "homework"
+"
+[0m17:29:16.148551 [debug] [ThreadPool]: Using postgres connection "create_analytics_homework"
+[0m17:29:16.150313 [debug] [ThreadPool]: On create_analytics_homework: BEGIN
+[0m17:29:16.151977 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:29:16.165520 [debug] [ThreadPool]: SQL status: BEGIN in 0.013 seconds
+[0m17:29:16.167178 [debug] [ThreadPool]: Using postgres connection "create_analytics_homework"
+[0m17:29:16.168691 [debug] [ThreadPool]: On create_analytics_homework: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "homework", "target_name": "dev", "connection_name": "create_analytics_homework"} */
+create schema if not exists "homework"
+[0m17:29:16.173927 [debug] [ThreadPool]: Postgres adapter: Postgres error: permission denied for database analytics
+
+[0m17:29:16.176183 [debug] [ThreadPool]: On create_analytics_homework: ROLLBACK
+[0m17:29:16.179604 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro create_schema
+[0m17:29:16.181724 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m17:29:16.183831 [debug] [ThreadPool]: On create_analytics_homework: Close
+[0m17:29:16.187825 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:29:16.190670 [debug] [MainThread]: Connection 'create_analytics_homework' was properly closed.
+[0m17:29:16.192638 [info ] [MainThread]: 
+[0m17:29:16.194449 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.19 seconds (0.19s).
+[0m17:29:16.196444 [error] [MainThread]: Encountered an error:
+Database Error
+  permission denied for database analytics
+[0m17:29:16.199389 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.9831705, "process_in_blocks": "3464", "process_kernel_time": 0.339623, "process_mem_max_rss": "109920", "process_out_blocks": "0", "process_user_time": 5.174257}
+[0m17:29:16.201485 [debug] [MainThread]: Command `dbt run` failed at 17:29:16.201276 after 2.99 seconds
+[0m17:29:16.205032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d0a24fa00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d093eec40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d09a3fa60>]}
+[0m17:29:16.207264 [debug] [MainThread]: Flushing usage events
+[0m17:29:16.754601 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:29:19.393805 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- seeds.homework.iris_dataset
+[0m17:29:19.416932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '04a005f5-d778-4672-bab9-0523f4274257', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed62ca4130>]}
+[0m17:29:19.607676 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/homework/target/manifest.json
+[0m17:29:19.623502 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/homework/target/semantic_manifest.json
+[0m17:29:19.649167 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '04a005f5-d778-4672-bab9-0523f4274257', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed62c850d0>]}
+[0m17:29:19.650966 [info ] [MainThread]: Found 2 models, 1 source, 587 macros
+[0m17:29:19.652176 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '04a005f5-d778-4672-bab9-0523f4274257', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed61b333d0>]}
+[0m17:29:19.654819 [info ] [MainThread]: 
+[0m17:29:19.656064 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:29:19.657462 [info ] [MainThread]: 
+[0m17:29:19.659185 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:29:19.666707 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics'
+[0m17:29:19.710013 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m17:29:19.712022 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "homework", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:29:19.713790 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:29:19.724375 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.010 seconds
+[0m17:29:19.727403 [debug] [ThreadPool]: On list_analytics: Close
+[0m17:29:19.729847 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now create_analytics_homework)
+[0m17:29:19.732313 [debug] [ThreadPool]: Creating schema "database: "analytics"
+schema: "homework"
+"
+[0m17:29:19.742974 [debug] [ThreadPool]: Using postgres connection "create_analytics_homework"
+[0m17:29:19.744822 [debug] [ThreadPool]: On create_analytics_homework: BEGIN
+[0m17:29:19.746549 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:29:19.755842 [debug] [ThreadPool]: SQL status: BEGIN in 0.009 seconds
+[0m17:29:19.757714 [debug] [ThreadPool]: Using postgres connection "create_analytics_homework"
+[0m17:29:19.759463 [debug] [ThreadPool]: On create_analytics_homework: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "homework", "target_name": "dev", "connection_name": "create_analytics_homework"} */
+create schema if not exists "homework"
+[0m17:29:19.761804 [debug] [ThreadPool]: Postgres adapter: Postgres error: permission denied for database analytics
+
+[0m17:29:19.763272 [debug] [ThreadPool]: On create_analytics_homework: ROLLBACK
+[0m17:29:19.765187 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro create_schema
+[0m17:29:19.766760 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m17:29:19.768307 [debug] [ThreadPool]: On create_analytics_homework: Close
+[0m17:29:19.770785 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:29:19.772645 [debug] [MainThread]: Connection 'create_analytics_homework' was properly closed.
+[0m17:29:19.774134 [info ] [MainThread]: 
+[0m17:29:19.775717 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.12 seconds (0.12s).
+[0m17:29:19.777708 [error] [MainThread]: Encountered an error:
+Database Error
+  permission denied for database analytics
+[0m17:29:19.779863 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 6.6149225, "process_in_blocks": "5392", "process_kernel_time": 0.301111, "process_mem_max_rss": "118300", "process_out_blocks": "0", "process_user_time": 8.802505}
+[0m17:29:19.781583 [debug] [MainThread]: Command `dbt run` failed at 17:29:19.781438 after 6.62 seconds
+[0m17:29:19.783329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed65690a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed61a5eca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed619a96d0>]}
+[0m17:29:19.784912 [debug] [MainThread]: Flushing usage events
+[0m17:29:20.297981 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:29:40.550719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1655a3aa90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1654b5b460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1654b5b400>]}
+
+
+============================== 17:29:40.570721 | 5e3b4651-3c96-4543-ad1e-29e1f05222e9 ==============================
+[0m17:29:40.570721 [info ] [MainThread]: Running with dbt=1.9.4
+[0m17:29:40.575035 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/opt/airflow/dags/dbt/homework/logs', 'debug': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt --profile homework run --project-dir=/opt/airflow/dags/dbt/homework --vars {"is_test": false, "data_date": "2025-04-22"}', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m17:29:40.564191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07568319d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07559523a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0755952340>]}
+
+
+============================== 17:29:40.589765 | 191fa5ff-05a2-4d82-b663-0da4f84e0855 ==============================
+[0m17:29:40.589765 [info ] [MainThread]: Running with dbt=1.9.4
+[0m17:29:40.596277 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/dags/dbt/homework/logs', 'profiles_dir': '/opt/airflow/dags/dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt --profile homework run --project-dir=/opt/airflow/dags/dbt/homework --vars {"is_test": false, "data_date": "2025-04-23"}', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:29:41.384559 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '191fa5ff-05a2-4d82-b663-0da4f84e0855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0754149760>]}
+[0m17:29:41.390105 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5e3b4651-3c96-4543-ad1e-29e1f05222e9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f16533815b0>]}
+[0m17:29:41.559370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '191fa5ff-05a2-4d82-b663-0da4f84e0855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f075597ddc0>]}
+[0m17:29:41.562136 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m17:29:41.566811 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5e3b4651-3c96-4543-ad1e-29e1f05222e9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f16558b7a60>]}
+[0m17:29:41.569896 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m17:29:41.982788 [debug] [MainThread]: checksum: f5df654a850f4b74beb13fbe0c7d8863b5b1a20bd535c3ac287d70e390b64d41, vars: {'data_date': '2025-04-23', 'is_test': False}, profile: homework, target: , version: 1.9.4
+[0m17:29:42.001074 [debug] [MainThread]: checksum: b4b46bb6a239f66694dfdd44ef1792882cb61f2fd7b1ea66b3c7a170d2bb602d, vars: {'data_date': '2025-04-22', 'is_test': False}, profile: homework, target: , version: 1.9.4
+[0m17:29:42.397852 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m17:29:42.400177 [debug] [MainThread]: previous checksum: f5df654a850f4b74beb13fbe0c7d8863b5b1a20bd535c3ac287d70e390b64d41, current checksum: b4b46bb6a239f66694dfdd44ef1792882cb61f2fd7b1ea66b3c7a170d2bb602d
+[0m17:29:42.402486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '191fa5ff-05a2-4d82-b663-0da4f84e0855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0756076e80>]}
+[0m17:29:43.290845 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:29:43.293173 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:29:43.309452 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- seeds.homework.iris_dataset
+[0m17:29:43.422099 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5e3b4651-3c96-4543-ad1e-29e1f05222e9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1652e86130>]}
+[0m17:29:43.817329 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/homework/target/manifest.json
+[0m17:29:43.842788 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/homework/target/semantic_manifest.json
+[0m17:29:43.905491 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5e3b4651-3c96-4543-ad1e-29e1f05222e9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f16532753d0>]}
+[0m17:29:43.909589 [info ] [MainThread]: Found 2 models, 1 source, 587 macros
+[0m17:29:43.913642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5e3b4651-3c96-4543-ad1e-29e1f05222e9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1654bc0970>]}
+[0m17:29:43.917937 [info ] [MainThread]: 
+[0m17:29:43.920990 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:29:43.924527 [info ] [MainThread]: 
+[0m17:29:43.931561 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:29:43.951395 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics'
+[0m17:29:44.059271 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m17:29:44.062483 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "homework", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:29:44.064836 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:29:44.082419 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.018 seconds
+[0m17:29:44.087024 [debug] [ThreadPool]: On list_analytics: Close
+[0m17:29:44.090488 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now create_analytics_homework)
+[0m17:29:44.093825 [debug] [ThreadPool]: Creating schema "database: "analytics"
+schema: "homework"
+"
+[0m17:29:44.114191 [debug] [ThreadPool]: Using postgres connection "create_analytics_homework"
+[0m17:29:44.116423 [debug] [ThreadPool]: On create_analytics_homework: BEGIN
+[0m17:29:44.118332 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:29:44.132633 [debug] [ThreadPool]: SQL status: BEGIN in 0.014 seconds
+[0m17:29:44.134947 [debug] [ThreadPool]: Using postgres connection "create_analytics_homework"
+[0m17:29:44.136888 [debug] [ThreadPool]: On create_analytics_homework: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "homework", "target_name": "dev", "connection_name": "create_analytics_homework"} */
+create schema if not exists "homework"
+[0m17:29:44.139462 [debug] [ThreadPool]: Postgres adapter: Postgres error: permission denied for database analytics
+
+[0m17:29:44.141551 [debug] [ThreadPool]: On create_analytics_homework: ROLLBACK
+[0m17:29:44.144640 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro create_schema
+[0m17:29:44.146589 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m17:29:44.148833 [debug] [ThreadPool]: On create_analytics_homework: Close
+[0m17:29:44.152344 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:29:44.154996 [debug] [MainThread]: Connection 'create_analytics_homework' was properly closed.
+[0m17:29:44.156855 [info ] [MainThread]: 
+[0m17:29:44.160539 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.23 seconds (0.23s).
+[0m17:29:44.162864 [error] [MainThread]: Encountered an error:
+Database Error
+  permission denied for database analytics
+[0m17:29:44.165968 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.8056831, "process_in_blocks": "24", "process_kernel_time": 0.480501, "process_mem_max_rss": "110100", "process_out_blocks": "0", "process_user_time": 8.989383}
+[0m17:29:44.168387 [debug] [MainThread]: Command `dbt run` failed at 17:29:44.168143 after 3.81 seconds
+[0m17:29:44.170586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1655a3aa90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1654bd9190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1652591970>]}
+[0m17:29:44.172462 [debug] [MainThread]: Flushing usage events
+[0m17:29:44.743793 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:29:48.663968 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- seeds.homework.iris_dataset
+[0m17:29:48.699952 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '191fa5ff-05a2-4d82-b663-0da4f84e0855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0753df1130>]}
+[0m17:29:48.968571 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/homework/target/manifest.json
+[0m17:29:48.988979 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/homework/target/semantic_manifest.json
+[0m17:29:49.025600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '191fa5ff-05a2-4d82-b663-0da4f84e0855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0757549ac0>]}
+[0m17:29:49.029340 [info ] [MainThread]: Found 2 models, 1 source, 587 macros
+[0m17:29:49.031923 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '191fa5ff-05a2-4d82-b663-0da4f84e0855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0753dd6400>]}
+[0m17:29:49.036030 [info ] [MainThread]: 
+[0m17:29:49.039000 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:29:49.041142 [info ] [MainThread]: 
+[0m17:29:49.044257 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:29:49.062980 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics'
+[0m17:29:49.135886 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m17:29:49.137654 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "homework", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:29:49.139332 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:29:49.154401 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.015 seconds
+[0m17:29:49.158167 [debug] [ThreadPool]: On list_analytics: Close
+[0m17:29:49.160993 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now create_analytics_homework)
+[0m17:29:49.163967 [debug] [ThreadPool]: Creating schema "database: "analytics"
+schema: "homework"
+"
+[0m17:29:49.182864 [debug] [ThreadPool]: Using postgres connection "create_analytics_homework"
+[0m17:29:49.185296 [debug] [ThreadPool]: On create_analytics_homework: BEGIN
+[0m17:29:49.187145 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:29:49.205166 [debug] [ThreadPool]: SQL status: BEGIN in 0.018 seconds
+[0m17:29:49.208260 [debug] [ThreadPool]: Using postgres connection "create_analytics_homework"
+[0m17:29:49.216130 [debug] [ThreadPool]: On create_analytics_homework: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "homework", "target_name": "dev", "connection_name": "create_analytics_homework"} */
+create schema if not exists "homework"
+[0m17:29:49.220678 [debug] [ThreadPool]: Postgres adapter: Postgres error: permission denied for database analytics
+
+[0m17:29:49.225024 [debug] [ThreadPool]: On create_analytics_homework: ROLLBACK
+[0m17:29:49.233172 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro create_schema
+[0m17:29:49.237322 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m17:29:49.240428 [debug] [ThreadPool]: On create_analytics_homework: Close
+[0m17:29:49.244896 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:29:49.251556 [debug] [MainThread]: Connection 'create_analytics_homework' was properly closed.
+[0m17:29:49.254582 [info ] [MainThread]: 
+[0m17:29:49.258041 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.21 seconds (0.21s).
+[0m17:29:49.262305 [error] [MainThread]: Encountered an error:
+Database Error
+  permission denied for database analytics
+[0m17:29:49.269243 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 8.906182, "process_in_blocks": "864", "process_kernel_time": 0.672032, "process_mem_max_rss": "116484", "process_out_blocks": "0", "process_user_time": 13.881992}
+[0m17:29:49.273486 [debug] [MainThread]: Command `dbt run` failed at 17:29:49.272935 after 8.91 seconds
+[0m17:29:49.281355 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07568319d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07529febe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0752949610>]}
+[0m17:29:49.286462 [debug] [MainThread]: Flushing usage events
+[0m17:29:49.860745 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:30:20.284277 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf07959a60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf06a7a400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf06a7a3a0>]}
+
+
+============================== 17:30:20.307405 | d851a83c-8f46-4d78-bbb1-dd9c19a9953f ==============================
+[0m17:30:20.307405 [info ] [MainThread]: Running with dbt=1.9.4
+[0m17:30:20.310876 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/opt/airflow/dags/dbt/homework/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt --profile homework run --project-dir=/opt/airflow/dags/dbt/homework --vars {"is_test": false, "data_date": "2025-04-22"}', 'send_anonymous_usage_stats': 'True'}
+[0m17:30:20.389481 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69c4b02a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69c3c23400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69c3c233a0>]}
+
+
+============================== 17:30:20.412957 | 243d68cc-1999-49d8-99a3-5203767fbe39 ==============================
+[0m17:30:20.412957 [info ] [MainThread]: Running with dbt=1.9.4
+[0m17:30:20.417062 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/opt/airflow/dags/dbt/homework/logs', 'fail_fast': 'False', 'profiles_dir': '/opt/airflow/dags/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt --profile homework run --project-dir=/opt/airflow/dags/dbt/homework --vars {"is_test": false, "data_date": "2025-04-23"}', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:30:21.246499 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd851a83c-8f46-4d78-bbb1-dd9c19a9953f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf051b28b0>]}
+[0m17:30:21.349532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '243d68cc-1999-49d8-99a3-5203767fbe39', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69c233e3d0>]}
+[0m17:30:21.517691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd851a83c-8f46-4d78-bbb1-dd9c19a9953f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf05244190>]}
+[0m17:30:21.525093 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m17:30:21.673245 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '243d68cc-1999-49d8-99a3-5203767fbe39', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69c3e43400>]}
+[0m17:30:21.681277 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m17:30:22.165407 [debug] [MainThread]: checksum: b4b46bb6a239f66694dfdd44ef1792882cb61f2fd7b1ea66b3c7a170d2bb602d, vars: {'data_date': '2025-04-22', 'is_test': False}, profile: homework, target: , version: 1.9.4
+[0m17:30:22.321442 [debug] [MainThread]: checksum: f5df654a850f4b74beb13fbe0c7d8863b5b1a20bd535c3ac287d70e390b64d41, vars: {'data_date': '2025-04-23', 'is_test': False}, profile: homework, target: , version: 1.9.4
+[0m17:30:22.730404 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m17:30:22.733523 [debug] [MainThread]: previous checksum: b4b46bb6a239f66694dfdd44ef1792882cb61f2fd7b1ea66b3c7a170d2bb602d, current checksum: f5df654a850f4b74beb13fbe0c7d8863b5b1a20bd535c3ac287d70e390b64d41
+[0m17:30:22.736021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd851a83c-8f46-4d78-bbb1-dd9c19a9953f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf07197d90>]}
+[0m17:30:24.606041 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:30:24.611221 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:30:24.637753 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- seeds.homework.iris_dataset
+[0m17:30:24.801958 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '243d68cc-1999-49d8-99a3-5203767fbe39', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69c1f4f130>]}
+[0m17:30:25.485891 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/homework/target/manifest.json
+[0m17:30:25.515127 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/homework/target/semantic_manifest.json
+[0m17:30:25.573805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '243d68cc-1999-49d8-99a3-5203767fbe39', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69c1eefcd0>]}
+[0m17:30:25.576669 [info ] [MainThread]: Found 2 models, 1 source, 587 macros
+[0m17:30:25.578681 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '243d68cc-1999-49d8-99a3-5203767fbe39', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69c3cb1f40>]}
+[0m17:30:25.583559 [info ] [MainThread]: 
+[0m17:30:25.585875 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:30:25.588384 [info ] [MainThread]: 
+[0m17:30:25.590840 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:30:25.609066 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics'
+[0m17:30:25.731397 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m17:30:25.733775 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "homework", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:30:25.736737 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:30:25.759344 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.023 seconds
+[0m17:30:25.764063 [debug] [ThreadPool]: On list_analytics: Close
+[0m17:30:25.768314 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now create_analytics_homework)
+[0m17:30:25.771672 [debug] [ThreadPool]: Creating schema "database: "analytics"
+schema: "homework"
+"
+[0m17:30:25.798407 [debug] [ThreadPool]: Using postgres connection "create_analytics_homework"
+[0m17:30:25.801008 [debug] [ThreadPool]: On create_analytics_homework: BEGIN
+[0m17:30:25.804088 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:30:25.820939 [debug] [ThreadPool]: SQL status: BEGIN in 0.017 seconds
+[0m17:30:25.823587 [debug] [ThreadPool]: Using postgres connection "create_analytics_homework"
+[0m17:30:25.827525 [debug] [ThreadPool]: On create_analytics_homework: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "homework", "target_name": "dev", "connection_name": "create_analytics_homework"} */
+create schema if not exists "homework"
+[0m17:30:25.831290 [debug] [ThreadPool]: Postgres adapter: Postgres error: permission denied for database analytics
+
+[0m17:30:25.834072 [debug] [ThreadPool]: On create_analytics_homework: ROLLBACK
+[0m17:30:25.837503 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro create_schema
+[0m17:30:25.840260 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m17:30:25.845612 [debug] [ThreadPool]: On create_analytics_homework: Close
+[0m17:30:25.852426 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:30:25.855359 [debug] [MainThread]: Connection 'create_analytics_homework' was properly closed.
+[0m17:30:25.859800 [info ] [MainThread]: 
+[0m17:30:25.862959 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.27 seconds (0.27s).
+[0m17:30:25.866915 [error] [MainThread]: Encountered an error:
+Database Error
+  permission denied for database analytics
+[0m17:30:25.872099 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 5.815928, "process_in_blocks": "0", "process_kernel_time": 0.540746, "process_mem_max_rss": "110352", "process_out_blocks": "0", "process_user_time": 9.162653}
+[0m17:30:25.876422 [debug] [MainThread]: Command `dbt run` failed at 17:30:25.875930 after 5.82 seconds
+[0m17:30:25.879543 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69c4b02a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69c3ca12b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69c1ed9850>]}
+[0m17:30:25.882799 [debug] [MainThread]: Flushing usage events
+[0m17:30:26.592064 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:30:29.779903 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- seeds.homework.iris_dataset
+[0m17:30:29.816202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd851a83c-8f46-4d78-bbb1-dd9c19a9953f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf04f23130>]}
+[0m17:30:30.118735 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dags/dbt/homework/target/manifest.json
+[0m17:30:30.140860 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dags/dbt/homework/target/semantic_manifest.json
+[0m17:30:30.184140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd851a83c-8f46-4d78-bbb1-dd9c19a9953f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fceefb9e130>]}
+[0m17:30:30.186636 [info ] [MainThread]: Found 2 models, 1 source, 587 macros
+[0m17:30:30.188553 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd851a83c-8f46-4d78-bbb1-dd9c19a9953f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf05244190>]}
+[0m17:30:30.192545 [info ] [MainThread]: 
+[0m17:30:30.194525 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:30:30.197358 [info ] [MainThread]: 
+[0m17:30:30.200224 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:30:30.216467 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics'
+[0m17:30:30.296880 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m17:30:30.299202 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "homework", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:30:30.301096 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:30:30.316657 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.016 seconds
+[0m17:30:30.320874 [debug] [ThreadPool]: On list_analytics: Close
+[0m17:30:30.324143 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now create_analytics_homework)
+[0m17:30:30.327382 [debug] [ThreadPool]: Creating schema "database: "analytics"
+schema: "homework"
+"
+[0m17:30:30.344966 [debug] [ThreadPool]: Using postgres connection "create_analytics_homework"
+[0m17:30:30.347466 [debug] [ThreadPool]: On create_analytics_homework: BEGIN
+[0m17:30:30.349287 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:30:30.363469 [debug] [ThreadPool]: SQL status: BEGIN in 0.014 seconds
+[0m17:30:30.366546 [debug] [ThreadPool]: Using postgres connection "create_analytics_homework"
+[0m17:30:30.368801 [debug] [ThreadPool]: On create_analytics_homework: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "homework", "target_name": "dev", "connection_name": "create_analytics_homework"} */
+create schema if not exists "homework"
+[0m17:30:30.371655 [debug] [ThreadPool]: Postgres adapter: Postgres error: permission denied for database analytics
+
+[0m17:30:30.373955 [debug] [ThreadPool]: On create_analytics_homework: ROLLBACK
+[0m17:30:30.376288 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro create_schema
+[0m17:30:30.378096 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m17:30:30.380496 [debug] [ThreadPool]: On create_analytics_homework: Close
+[0m17:30:30.384109 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:30:30.386238 [debug] [MainThread]: Connection 'create_analytics_homework' was properly closed.
+[0m17:30:30.388142 [info ] [MainThread]: 
+[0m17:30:30.390129 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.19 seconds (0.19s).
+[0m17:30:30.392373 [error] [MainThread]: Encountered an error:
+Database Error
+  permission denied for database analytics
+[0m17:30:30.395410 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 10.439213, "process_in_blocks": "184", "process_kernel_time": 0.667749, "process_mem_max_rss": "118388", "process_out_blocks": "0", "process_user_time": 13.574256}
+[0m17:30:30.398323 [debug] [MainThread]: Command `dbt run` failed at 17:30:30.398023 after 10.44 seconds
+[0m17:30:30.400756 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf07959a60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fceefafb2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fceefa46670>]}
+[0m17:30:30.402787 [debug] [MainThread]: Flushing usage events
+[0m17:30:30.916357 [debug] [MainThread]: An error was encountered while trying to flush usage events
