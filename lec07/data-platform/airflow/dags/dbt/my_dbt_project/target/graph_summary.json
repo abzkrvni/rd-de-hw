@@ -1,1 +1,1 @@
-{"_invocation_id": "2873ca9f-6b20-4332-8014-47f881799a8c", "linked": {"0": {"name": "model.my_dbt_project.my_first_model", "type": "model"}}}
+{"_invocation_id": "e54bc82d-979f-48ac-9663-1ee724783e75", "linked": {"0": {"name": "source.my_dbt_project.analytics.iris_dataset", "type": "source", "succ": [3]}, "1": {"name": "model.my_dbt_project.my_first_model", "type": "model"}, "2": {"name": "model.my_dbt_project.iris_processed", "type": "model"}, "3": {"name": "model.my_dbt_project.stg_iris", "type": "model", "succ": [2]}}}

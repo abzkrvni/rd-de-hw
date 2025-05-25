@@ -3,9 +3,9 @@ with source as (
 )
 
 select
-    sepal_length,
-    sepal_width,
-    petal_length,
-    petal_width,
+    cast(sepal_length as numeric) as sepal_length,
+    cast(sepal_width as numeric) as sepal_width,
+    cast(petal_length as numeric) as petal_length,
+    cast(petal_width as numeric) as petal_width,
     species
 from source
