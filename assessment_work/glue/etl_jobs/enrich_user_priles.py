@@ -62,6 +62,10 @@ enriched_df = joined_df.select(
 )
 
 
-enriched_df.write.mode("overwrite").parquet(gold_s3_path)
+enriched_df.write \
+    .mode("overwrite") \
+    .format("parquet") \
+    .option("path", gold_s3_path) \
+    .saveAsTable("gold.user_profiles_enriched")
 
 print(f"Enriched user profiles written to {gold_s3_path}. Rows: {enriched_df.count()}")
