@@ -989,6 +989,8 @@ Resources:
         - Name: dag-sync
           Image: 'amazon/aws-cli:latest'
           Essential: true
+          EntryPoint:
+            - sh
           Environment:
             - Name: S3_BUCKET
               Value: !Ref AirflowBucket
@@ -999,8 +1001,7 @@ Resources:
           MountPoints:
             - SourceVolume: airflow-dags
               ContainerPath: /opt/airflow/dags
-          Command:
-            - sh
+          Command:            
             - -c
             - |
               echo "Starting DAG sync from S3 to EFS..."
