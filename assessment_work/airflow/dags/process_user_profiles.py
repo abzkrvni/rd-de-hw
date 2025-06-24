@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.providers.amazon.aws.operators.glue import GlueJobOperator
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 
 default_args = {
     "owner": "data-team",
@@ -47,5 +48,12 @@ with DAG(
         },
     )
 
+    trigger_enrich_user_profiles = TriggerDagRunOperator(
+        task_id="trigger_enrich_user_profiles_dag",
+        trigger_dag_id="enrich_user_profiles_dag",
+        wait_for_completion=False,
+        reset_dag_run=True,
+    )    
 
-    raw_to_bronze >> bronze_to_silver
+
+    raw_to_bronze >> bronze_to_silver >> trigger_enrich_user_profiles
