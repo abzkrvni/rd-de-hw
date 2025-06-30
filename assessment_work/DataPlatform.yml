@@ -29,7 +29,7 @@ Parameters:
     MinLength: 8
     Description: 'Airflow admin password (min 8 chars)'
   
-  AirflowBucket:
+  AirflowBucketName:
     Type: String
     NoEcho: true
     MinLength: 8
@@ -773,7 +773,7 @@ Resources:
             - Name: _AIRFLOW_WWW_USER_PASSWORD
               Value: !Ref AirflowAdminPassword
             - Name: S3_CONFIG_BUCKET
-              Value: !Ref AirflowBucket
+              Value: !Ref AirflowBucketName
           MountPoints:
             - SourceVolume: airflow-dags
               ContainerPath: /opt/airflow/dags
@@ -989,6 +989,8 @@ Resources:
         - Name: dag-sync
           Image: 'amazon/aws-cli:latest'
           Essential: true
+          EntryPoint:
+            - sh
           Environment:
             - Name: S3_BUCKET
               Value: !Ref AirflowBucket
@@ -999,8 +1001,7 @@ Resources:
           MountPoints:
             - SourceVolume: airflow-dags
               ContainerPath: /opt/airflow/dags
-          Command:
-            - sh
+          Command:            
             - -c
             - |
               echo "Starting DAG sync from S3 to EFS..."
